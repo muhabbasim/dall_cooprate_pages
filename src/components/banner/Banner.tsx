@@ -1,6 +1,5 @@
 import './style.css'
 import BannerContent from './BannerContent';
-import heroImg from 'src/assets/heroImg.jpg';
 import { Grid, Box, Container } from '@mui/material';
 import { DataProps } from 'src/data/DataProps';
 import { cn } from 'src/lib/utils';
@@ -24,7 +23,7 @@ const Banner = ( props: DataProps ) => {
         backgroundSize: 'cover',
         }} 
       className={cn(`hero_containerx= `)} 
-      sx={{ overflow: 'hidden', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundImage: heroImg }}
+      sx={{ overflow: 'hidden', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
     >
       <Container maxWidth="lg">
         <Grid container spacing={3} alignItems="center">
