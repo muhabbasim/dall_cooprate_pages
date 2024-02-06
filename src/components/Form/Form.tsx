@@ -15,7 +15,7 @@ type PropsTextArea = {
     className: string;
     showErrorMsg?: boolean;
     name: string;
-    rows?: string;
+    // rows?: string;
     placeholder?: any;
 
 }
@@ -70,6 +70,6 @@ export const Checkbox = memo(({label, labelClass, className, children, ...props 
     )
 })
 
-Input.defaultProps = {
-    showErrorMsg: true
-}
+// Input.defaultProps = {
+//     showErrorMsg: true
+// }

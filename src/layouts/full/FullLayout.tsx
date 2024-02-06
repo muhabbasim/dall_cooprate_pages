@@ -3,9 +3,7 @@ import { styled, Container, Box, useTheme } from '@mui/material';
 import { useSelector } from 'src/store/Store';
 import { Outlet } from 'react-router-dom';
 import { AppState } from 'src/store/Store';
-import Header from './vertical/header/Header';
-import Sidebar from './vertical/sidebar/Sidebar';
-import Customizer from './shared/customizer/Customizer';
+
 
 const MainWrapper = styled('div')(() => ({
   display: 'flex',
@@ -31,7 +29,6 @@ const FullLayout: FC = () => {
   return (
     <MainWrapper>
 
-      <Sidebar />
 
       <PageWrapper
         className="page-wrapper"
@@ -42,7 +39,6 @@ const FullLayout: FC = () => {
         }}
       >
 
-        <Header />
         
         {/* PageContent */}
         <Container
@@ -56,7 +52,6 @@ const FullLayout: FC = () => {
           </Box>
 
         </Container>
-        <Customizer />
       </PageWrapper>
     </MainWrapper>
   );

@@ -5,7 +5,6 @@ import './_footer.scss'
 import { Col, Row } from 'react-bootstrap';
 import { Container } from '@mui/material';
 import { Link } from 'react-router-dom';
-import PropTypes  from "prop-types";
 import * as Yup from 'yup';
 import { Form, Formik } from 'formik';
 
