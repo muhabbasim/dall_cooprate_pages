@@ -7,6 +7,7 @@ import { AppState, useDispatch, useSelector } from 'src/store/Store';
 import { setDir, setLanguage } from 'src/store/customizer/CustomizerSlice';
 import { RxGlobe } from "react-icons/rx";
 import { cn } from 'src/lib/utils';
+import { useLocation } from 'react-router';
 
 type Props = {
   toggleBar: boolean;
@@ -18,6 +19,10 @@ const Language = ({toggleBar} : Props) => {
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+
+  const location = useLocation();
+  const pathName = location.pathname
+  const isCat = pathName.includes('category')
 
 
   const customizer = useSelector((state: AppState) => state.customizer);
@@ -60,9 +65,9 @@ const Language = ({toggleBar} : Props) => {
         onClick={handleClick}
         className='flex gap-1 justify-center items-center'
       >
-        <RxGlobe className={cn('text-white text-lg', toggleBar && "text-black")}/>
+        <RxGlobe className={cn('text-white text-lg', toggleBar && "text-black", !toggleBar && isCat && 'text-black')}/>
         <div className='flex items-center justify-center'>
-          <span className={cn('text-white text-lg', toggleBar && "text-black")}>{currentLang.value === 'en' ? "En" : (currentLang.value === 'ar' && "Ar")}</span>
+          <span className={cn('text-white text-lg', toggleBar && "text-black", !toggleBar && isCat && 'text-black')}>{currentLang.value === 'en' ? "En" : (currentLang.value === 'ar' && "Ar")}</span>
         </div>
       </IconButton>
       <Menu

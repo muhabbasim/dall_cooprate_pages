@@ -26,9 +26,8 @@ const Landingpage = () => {
     } 
   }, [currenLand]);
   
-
   let landBanner;
-
+  
   if( currenLand?.name === 'tourism_authority') {
     landBanner = <BannerSlide/>
   } else if (currenLand?.name === 'performing_art') {

@@ -10,7 +10,6 @@ const BlankLayout = Loadable(lazy(() => import('../layouts/blank/BlankLayout')))
 const LandingPage = Loadable(lazy(() => import('../pages/landingpage/Landingpage')));
 const Options = Loadable(lazy(() => import('../pages/landingpage/Options')));
 const Login = Loadable(lazy(() => import('../pages/auth/login/Login')));
-const ForgotPassword = Loadable(lazy(() => import('../pages/auth/forget_password/ForgotPassword')));
 const NotFound = Loadable(lazy(() => import('../pages/error/Error')));
 const Category = Loadable(lazy(() => import('../pages/category/CategoryPage')));
 
@@ -23,8 +22,6 @@ const Router = [
       // Acc routes
       { path: '/', element: <Options /> },
       { path: '/auth/login', element: <Login /> },
-      { path: '/auth/forgot_password', element: <ForgotPassword /> },
-      // { path: '/category/:id', element: <Category/>},
       { path: '/error_page', element: <NotFound/>},
       { path: '*', element: <NotFound/>},
     ],

@@ -96,23 +96,23 @@ const PostPage = () => {
                       <Blockquote
                         className="my-[3.5rem] ml-24 sm:ml-0"
                         theme="blockquote-style-02"
-                        title={t(`${data?.content}`)}
+                        title={t(`${data?.subContent1}`)}
                         author={t(`${data?.author}`)}
                       />
-                      {!rtl && data?.subContent1 ? (
-                        <Dropcaps theme="dropcaps-style04" content={data?.subContent1} />
+                      {!rtl && data?.subContent2 ? (
+                        <Dropcaps theme="dropcaps-style04" content={data?.subContent2} />
                         ) : (
                           <p className="my-[25px]">
                             <Translatable>
-                              {data?.subContent1}
+                              {data?.subContent2}
                             </Translatable>
                           </p>
                         )}
-                      { data?.subContent2 && <p className="my-[25px]">
+                      {/* { data?.subContent2 && <p className="my-[25px]">
                           <Translatable>
                             {data?.subContent2}
                           </Translatable>
-                      </p>}
+                      </p>} */}
                     </Col>
                     </motion.div>
 

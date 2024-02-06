@@ -65,7 +65,7 @@ const Navigations = ({ toggleBar }: Props) => {
                 <div>
                     <LuUser2  
                         style={{ color: 'white' }}
-                        className={`w-5 h-5 font-medium cursor-pointer ${toggleBar && 'text-black'}`}
+                        className={cn(`w-5 h-5 font-medium cursor-pointer ${toggleBar && 'text-black'}`, !toggleBar && isCat && 'text-black')}
                     />
                 </div>
                 <Language toggleBar={toggleBar}/>

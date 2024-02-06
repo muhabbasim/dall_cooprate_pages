@@ -16,6 +16,9 @@ const Logo = ({ toggleBar, data }: Props) => {
 
   const location = useLocation();
   const pathName = location.pathname.split('/')[1]
+  const category = location.pathname
+  const isCat = category.includes('category')
+  
   const rtl = useSelector(state => state.customizer.activeDir === 'rtl')
   const LinkStyled = styled(Link)(() => ({
     overflow: 'hidden',
@@ -30,7 +33,7 @@ const Logo = ({ toggleBar, data }: Props) => {
         alignItems: 'center',
       }}
     >
-      <h1 className={cn('text-white font-bold text-4xl uppercase', toggleBar && 'text-black')}>
+      <h1 className={cn('text-white font-bold text-4xl uppercase', toggleBar && 'text-black', !toggleBar && isCat && 'text-black')}>
         {rtl ? data?.logo_name_ar : data?.logo_name_en}
       </h1>
       {/* <img src={data?.logo} alt="logo" 

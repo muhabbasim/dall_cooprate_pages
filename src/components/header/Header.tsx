@@ -16,11 +16,15 @@ import Navigations from './Navigations';
 import MobileSidebar from './MobileSidebar';
 import { IconMenu2 } from '@tabler/icons-react';
 import { cn } from 'src/lib/utils';
+import { useLocation } from 'react-router';
 
 
 
 const LpHeader = (props: any) => {
 
+  const location = useLocation();
+  const pathName = location.pathname
+  const isCat = pathName.includes('category')
 
   const ToolbarStyled = styled(Toolbar)(() => ({
     width: '100%',
@@ -69,7 +73,7 @@ const LpHeader = (props: any) => {
     <div  
       // position="fixed" 
       // elevation={toggleBar ? 8 : 0}
-      className={cn('fixed z-50 left-0 right-0 bg-transparent transition-all py-2', toggleBar &&  "bg-white shadow")}
+      className={cn('fixed z-50 left-0 right-0 bg-transparent transition-all py-2', toggleBar &&  "bg-white shadow", isCat && "border-b")}
     >
       <Container maxWidth={'lg'}>
         <ToolbarStyled>
