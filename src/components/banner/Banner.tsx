@@ -3,17 +3,8 @@ import BannerContent from './BannerContent';
 import { Grid, Box, Container } from '@mui/material';
 import { DataProps } from 'src/data/DataProps';
 import { cn } from 'src/lib/utils';
-
+import  heroBg from 'src/assets/performing_art/performing_bg.jpg'
 const Banner = ( props: DataProps ) => {
-  let heroBg = ''
-  
-  if ( props.name.includes('performing') ) {
-    heroBg = 'src/assets/performing_art/performing_bg.jpg'
-  } else if ( props.name.includes('tourism')) {
-    heroBg = 'src/assets/tourism_bg.jpg'
-  }
-
-
   return (
     <Box 
       style={{
@@ -21,7 +12,7 @@ const Banner = ( props: DataProps ) => {
         backgroundPosition: 'center',
         // backgroundAttachment: 'fixed',
         backgroundSize: 'cover',
-        }} 
+      }} 
       className={cn(`hero_containerx= `)} 
       sx={{ overflow: 'hidden', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
     >
