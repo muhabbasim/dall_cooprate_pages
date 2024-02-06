@@ -16,6 +16,16 @@ import CategoryBanner from "src/components/major_banner/CategoryBanner";
 import performingArtFeatureBg from 'src/assets/performing_art/bg5.avif'
 import tourismFeatureBg from 'src/assets/backgrounds/home-branding-agency-bg-img-03.webp'
 
+// sponsorship
+import tourism_sponsor_logo1 from 'src/assets/tourism_autority/ministry-of-tourism.png'
+import tourism_sponsor_logo2 from 'src/assets/tourism_autority/sta-logo.png'
+import tourism_sponsor_logo3 from 'src/assets/tourism_autority/E3ghWRlXMAMWgI3.jpg'
+
+// import armedForces_sponsor_logo1 from 'src/assets/armed_forces/Armed_Forces.png'
+// import armedForces_sponsor_logo2 from 'src/assets/armed_forces/Royal_Saudi_Land_Forces.png'
+// import armedForces_sponsor_logo3 from 'src/assets/armed_forces/h_logo.png'
+
+
 const cooperatesData = [
   {
     name: 'tourism_authority',
@@ -61,6 +71,23 @@ const cooperatesData = [
       feature_sub: "Duhal, Journeying Towards Success",
       feature_background: tourismFeatureBg,
       feature_sponsorship: true,
+      sponsorship_data: [
+        { 
+          id: 1,
+          name: '',
+          logo: tourism_sponsor_logo1
+        },
+        { 
+          id: 2,
+          name: '',
+          logo: tourism_sponsor_logo2
+        },
+        { 
+          id: 3,
+          name: '',
+          logo: tourism_sponsor_logo3
+        },
+      ],
       features_data: [
         { 
           id: 1,
@@ -497,7 +524,24 @@ const cooperatesData = [
       feature_title: "Midar Milestones",
       feature_sub: "Midar's Ambitious Aspirations Reflected in the Project Features",
       feature_background: performingArtFeatureBg,
-      feature_sponsorship: true,
+      feature_sponsorship: false,
+      sponsorship_data: [
+        { 
+          id: 1,
+          name: '',
+          logo: "",
+        },
+        { 
+          id: 2,
+          name: '',
+          logo: "",
+        },
+        { 
+          id: 3,
+          name: '',
+          logo: "",
+        },
+      ],
       features_data: [
         { 
           id: 1,
@@ -981,11 +1025,28 @@ const cooperatesData = [
     },
 
     features: {
-      
       feature_title: "Thukhor Milestones",
       feature_sub: "Thukhor's Ambitious Aspirations Reflected in the Project Features",
       feature_background: tourismFeatureBg,
       feature_sponsorship: true,
+      sponsorship_data: [
+        { 
+          id: 1,
+          name: '',
+          logo: tourism_sponsor_logo1
+        },
+        { 
+          id: 2,
+          name: '',
+          logo: tourism_sponsor_logo2
+        },
+        { 
+          id: 3,
+          name: '',
+          logo: tourism_sponsor_logo3
+        },
+      ],
+
       features_data: [
         { 
           id: 1,

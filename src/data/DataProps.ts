@@ -34,6 +34,7 @@ export type DataProps = {
     features_data: any;
     feature_background: any
     feature_sponsorship: boolean,
+    sponsorship_data: any;
   }
 
   category: {
