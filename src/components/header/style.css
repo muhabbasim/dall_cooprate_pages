@@ -1,0 +1,9 @@
+.bar {
+  background-color: transparent;
+  /* transition: all 0.5s ease; */
+}
+
+.show {
+  background-color: white;
+  /* transition: all 0.5s ease-in-out; */
+}

@@ -1,0 +1,17 @@
+@tailwind base;
+
+/* Variable */
+// @import "./variable";
+
+/* Core */
+// @import "./core/reset";
+@import "./core/classes";
+@import "./core/typography";
+
+.cover-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  // overflow: hidden;
+  position: relative;
+  background-position: center center;
+}
