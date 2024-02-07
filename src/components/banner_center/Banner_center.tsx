@@ -5,6 +5,7 @@ import { Link as ScrollTo } from "react-scroll"
 import Buttons from '../Button/Buttons'
 import '../../scss/core/_classes.scss'
 import '../../scss/core/_typography.scss'
+import Translatable from '../translatable_text/Translatable';
 
 export default function Banner_center() {
 
@@ -30,9 +31,11 @@ export default function Banner_center() {
                     damping: 30,
                     delay: 0.7,
                   }}
-                  className="font-serif font-medium uppercase text-[#016430] tracking-[3px] text-neonorange mb-[40px] sm:w-full sm:mb-[25px]"
+                  className="font-serif font-medium uppercase text-2xl text-[#016430] tracking-[3px] text-neonorange mb-[40px] sm:w-full sm:mb-[25px]"
                 >
-                  Ministry of Defence
+                  <Translatable>
+                    Ministry of Defence
+                  </Translatable>
                 </motion.p>
                 <motion.h1 
                   initial={{ opacity: 0, translateY: 0, scale: 1.2 }}
@@ -45,7 +48,9 @@ export default function Banner_center() {
                   }}
                   className="font-serif font-semibold -tracking-[3px] text-white mb-14 sm:mb-[20px] xs:-tracking-[.5px] xs:text-[28px] xs:leading-[38px]"
                 >
-                  Unlock Your Potential, Serve with Strength!
+                  <Translatable>
+                    Unlock Your Potential, Serve with Strength!
+                  </Translatable>
                 </motion.h1>
                 <div className="flex flex-row justify-center border-y border-[#ffffff1a] text-center py-[15px] mb-16 xs:block">
                   <div className="mr-[25px] xs:mr-0 sm:mr-[15px] max-w-[500px]">
@@ -58,9 +63,11 @@ export default function Banner_center() {
                           damping: 30,
                           delay: 0.2,
                         }}
-                      className="text-md text-white font-serif font-medium uppercase inline-block"
+                      className="text-xl text-white font-serif font-medium uppercase inline-block"
                     >
-                      Join the Armed Forces Analysis Program Now and Discover Your Path to Excellence
+                      <Translatable>
+                        Join the Armed Forces Analysis Program Now and Discover Your Path to Excellence
+                      </Translatable>
                     </motion.span>
                   </div>
                 </div>

@@ -5,7 +5,7 @@ import FeaturesTitle from './FeaturesTitle';
 import { Typography, Grid, Container, Box } from '@mui/material';
 import AnimationFadeIn from '../animation/Animation';
 import { Col, Row } from 'react-bootstrap';
-import IconWithText from '../IconWithText/IconWithText';
+import IconWithText from './IconWithText/IconWithText';
 import { DataProps } from 'src/data/DataProps';
 import { cn } from 'src/lib/utils';
 import Translatable from '../translatable_text/Translatable';

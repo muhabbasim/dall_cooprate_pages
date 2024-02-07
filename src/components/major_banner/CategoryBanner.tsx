@@ -24,7 +24,7 @@ export default function CategoryBanner( props: DataProps ) {
       <Container >
         <motion.div {...fadeIn} className="flex gap-10 justify-between">
           <Col lg={6} sm={12} className=" md:mb-[40px] sm:mb[15px] xs:mb-[20px]">
-            <h2 className="heading-5 font-serif leading-[3rem] font-semibold lg:w-full">
+            <h2 className="heading-4 font-serif leading-[3rem] font-semibold lg:w-full">
               <Translatable>
                 {props?.category?.category_title}
               </Translatable>
@@ -33,7 +33,7 @@ export default function CategoryBanner( props: DataProps ) {
           <Col lg={6} sm={12}>
             <Row sm={12} xs={1} className="gap-y-10">
               <Col className="xs:text-center">
-                <span className="font-serif font-medium text-xl mb-[10px] block xs:mb-[5px]">
+                <span className="font-serif text-2xl font-bold mb-[10px] block xs:mb-[5px]">
                   <Translatable>
                     {props?.category?.title_sub}
                   </Translatable>

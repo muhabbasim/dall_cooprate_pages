@@ -13,6 +13,8 @@ import cooperatesData from 'src/data/CooporateData';
 import BannerSlide from 'src/components/banner_slide/BannerSlide';
 import CategoryBanner from 'src/components/major_banner/CategoryBanner';
 import Banner_center from 'src/components/banner_center/Banner_center';
+// import MasterCategory from 'src/components/master_category/MasterCategory';
+// import SimpleCategory from 'src/components/simple_category/SimpleCategory';
 
 const Landingpage = () => {
   const route = useNavigate();
@@ -46,6 +48,9 @@ const Landingpage = () => {
           </div>
           <Features data={currenLand} options={currenLand?.features?.feature_sponsorship}/>
           <CategoryBanner {...currenLand}/>
+          <div>
+            {currenLand?.additional_section?.section1}
+          </div>
           <ContactForm/>
           <C2a2 {...currenLand}/>
           <Footer {...currenLand}/>

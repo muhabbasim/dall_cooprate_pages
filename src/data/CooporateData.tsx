@@ -26,6 +26,10 @@ import tourism_sponsor_logo3 from 'src/assets/tourism_autority/E3ghWRlXMAMWgI3.j
 // import armedForces_sponsor_logo3 from 'src/assets/armed_forces/h_logo.png'
 
 
+//additional sections
+import SimpleCategory from 'src/components/simple_category/SimpleCategory';
+
+
 const cooperatesData = [
   {
     name: 'tourism_authority',
@@ -1017,7 +1021,7 @@ const cooperatesData = [
 
     hero: {
       hero_title: 'Unlock Your Artistic Potential &',
-      hero_title2: 'Its time to take the stage!',
+      hero_title2: 'Discover the world!',
       hero_cta: 'The assessment of artistic abilities forms the cornerstone of success in the performing arts. Recognizing these capabilities is fundamental to achieving excellence on the stage',
       hero_images: [
         { img: 'https://images.unsplash.com/photo-1593625240542-8342965fe160?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
@@ -1025,8 +1029,8 @@ const cooperatesData = [
     },
 
     features: {
-      feature_title: "Thukhor Milestones",
-      feature_sub: "Thukhor's Ambitious Aspirations Reflected in the Project Features",
+      feature_title: "Nislan Milestones",
+      feature_sub: "Nislan's Ambitious Aspirations Reflected in the Project Features",
       feature_background: tourismFeatureBg,
       feature_sponsorship: true,
       sponsorship_data: [
@@ -1101,9 +1105,9 @@ const cooperatesData = [
 
     category: {
       category_component: CategoryBanner,
-      category_title: 'Saudi Armed Forces Divisions',
-      title_sub: "Saudi Armed Forces vision",
-      title_sub_desc: "Preparing and leading the Armed Forces to defend the security, interests, and sovereignty of the Kingdom and protect it from any external aggression. Collaborating with all state ministries to achieve national security and stability",
+      category_title: 'Saudi Armed Forces Divisions & NISLAN initiative',
+      title_sub: "NISLAN initiative",
+      title_sub_desc: "NISLAN service is an effective initiative that assists the armed forces in the process of selecting military specializations for their members after conducting screening and obtaining initial approval. This service relies on advanced and precise analytical criteria aimed at guiding individuals toward specializations that align with their skills and interests, thereby enhancing the effectiveness and efficiency of the armed forces",
       category_data: [
         {
           id: 1,
@@ -1214,10 +1218,10 @@ const cooperatesData = [
     },
 
     footer: {
-      name: 'tourism_uthority',
-      logo: "tourism_uthority_logo",
+      name: 'armed_forces',
+      logo: "armed_forces_logo",
       footer_action: {
-        desc: 'Unlock Your Artistic Potential & its time to take the stage!',
+        desc: 'Unlock Your Artistic Potential & Discover the world!',
         button: 'Book your seat'
       },
       
@@ -1394,7 +1398,9 @@ const cooperatesData = [
       }
     }, 
 
-    
+    additional_section: {
+      section1: <SimpleCategory/>
+    }
   },
 ]
 

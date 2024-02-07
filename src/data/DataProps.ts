@@ -77,7 +77,9 @@ export type DataProps = {
       third: string;
 
     };
-  }
+  },
+
+  additional_section?: any;
 
 }
 
