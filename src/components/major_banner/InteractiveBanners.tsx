@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import './_interactivebanners.scss'
 // Libraries
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination, EffectFade } from "swiper/modules";
 import PropTypes from "prop-types"
 
 // Components
@@ -31,7 +31,7 @@ const InteractiveBanners = (props: any) => {
                 <Swiper 
                     ref={swiperRef} 
                     className="white-move" 
-                    modules={[Autoplay, Pagination, Navigation]}
+                    modules={[Pagination, Navigation, EffectFade, Autoplay]}
                     slidesPerView={1}
                     spaceBetween={30}
                     loop={true}
