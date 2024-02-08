@@ -61,9 +61,9 @@ const cooperatesData = [
       hero_title2: 'Duhal, Journeying Towards Success',
       hero_cta: "tourism_authority_hero_title Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias ",
       hero_images: [
-        { img: 'https://plus.unsplash.com/premium_photo-1663011062275-d9f9e2c6743a?q=80&w=2971&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
         { img: 'https://images.unsplash.com/photo-1682695794816-7b9da18ed470?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
         { img: 'https://images.unsplash.com/photo-1682685797736-dabb341dc7de?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+        { img: 'https://plus.unsplash.com/premium_photo-1663011062275-d9f9e2c6743a?q=80&w=2971&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
         { img: 'https://images.unsplash.com/photo-1683009427590-dd987135e66c?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
       ],
       banner_component: <BannerSlide/>,
