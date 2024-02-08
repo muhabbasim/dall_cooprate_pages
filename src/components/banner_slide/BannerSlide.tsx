@@ -6,7 +6,10 @@ import { motion } from 'framer-motion';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Translatable from '../translatable_text/Translatable';
-
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const BannerSlide = () => {
   const [activeSlide, setActiveSlide] = useState(0)
@@ -42,11 +45,13 @@ const BannerSlide = () => {
         <section className="home-startup-swiper min-h-[100vh]">
             <Swiper
                 className="min-h-[100vh] startup swiper-navigation-04 swiper-navigation-light swiper-pagination-03 swiper-pagination-light swiper-pagination-medium xl:sm-nav-hidden"
-                modules={[Pagination, Navigation, EffectFade, Autoplay]}
+                modules={[Pagination, Navigation, Autoplay, EffectFade]}
+                effect={'fade'}
                 slidesPerView={1}
                 spaceBetween={30}
                 loop={true}
                 keyboard={{ enabled: true, onlyInViewport: true }}
+                fadeEffect={{ crossFade: true }}
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
                 breakpoints={{ 992: { slidesPerView: 1 }, 768: { slidesPerView: 2 } }}
                 onSlideChange={(swiperCore) => {
@@ -107,3 +112,17 @@ const BannerSlide = () => {
 }
 
 export default BannerSlide
+
+
+// className="min-h-[100vh] startup swiper-navigation-04 swiper-navigation-light swiper-pagination-03 swiper-pagination-light swiper-pagination-medium xl:sm-nav-hidden"
+// modules={[Pagination, Navigation, EffectFade, Autoplay]}
+// slidesPerView={1}
+// spaceBetween={30}
+// loop={true}
+// keyboard={{ enabled: true, onlyInViewport: true }}
+// autoplay={{ delay: 3000, disableOnInteraction: false }}
+// breakpoints={{ 992: { slidesPerView: 1 }, 768: { slidesPerView: 2 } }}
+// onSlideChange={(swiperCore) => {
+//     const { realIndex } = swiperCore;
+//     setActiveSlide(realIndex)
+// }} 
