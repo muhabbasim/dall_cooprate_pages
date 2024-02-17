@@ -21,7 +21,7 @@ import { DataProps } from 'src/data/DataProps';
 
 const FooterStyle = (props: DataProps) => {
     return (
-        <FooterContainer topSpace={false} className={`footer-style-04`}>
+        <FooterContainer topSpace={false} className={`footer-style-04 p-5 md:p-0`}>
             <div className="md:py-[50px]">
                 <Container >
                     <Row className="justify-between">

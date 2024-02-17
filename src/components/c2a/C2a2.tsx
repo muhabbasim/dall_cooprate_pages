@@ -33,7 +33,7 @@ const C2a2 = (data: DataProps) => {
         <Container maxWidth="lg">
           <Grid container justifyContent="space-between" spacing={3}>
             <Grid item xs={12} sm={12} lg={12}>
-              <div className='flex items-center justify-between'>
+              <div className=' md:flex items-center justify-between'>
 
                 <Typography variant="h2" maxWidth={600} color="background.paper" fontWeight={700} >
                   <Translatable>

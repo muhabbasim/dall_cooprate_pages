@@ -40,7 +40,7 @@ const Landingpage = () => {
 
   
   return (
-    <>
+    <div className='overflow-hidden'>
       { currenLand &&  (
         <PageContainer title="Landingpage" description="this is Landingpage">
           <div>
@@ -56,7 +56,7 @@ const Landingpage = () => {
           <Footer {...currenLand}/>
         </PageContainer>
       )} 
-    </>
+    </div>
   );
 };
 

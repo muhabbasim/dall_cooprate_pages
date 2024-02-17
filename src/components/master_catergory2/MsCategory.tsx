@@ -22,7 +22,7 @@ export default function MsCategory() {
                   <Col className="xs:text-center">
                     <p className="w-[85%] lg:w-full xs:w-[75%] text-lg sm:mx-auto ">
                       <Translatable>
-                      A portal to assist decision-making leaders who seek to discover human capabilities and align them with roles that match their abilities, aiming for enhanced productivity and cost-effective, balanced expenditure in training and recruitment
+                        A portal to assist decision-making leaders who seek to discover human capabilities and align them with roles that match their abilities, aiming for enhanced productivity and cost-effective, balanced expenditure in training and recruitment
                       </Translatable>
                     </p>
                   </Col>
@@ -35,13 +35,14 @@ export default function MsCategory() {
             <MsCategorySlider
               // data={TextSliderData}
               carousalOption={{
-                slidesPerView: 1,
+                // slidesPerView: 1,
                 spaceBetween: 60,
                 loop: true,
                 centeredSlides: true,
-                autoplay: { delay: 2500, disableOnInteraction: false },
+                autoplay: { delay: 2500, disableOnInteraction: false, reverseDirection: true },
                 breakpoints: { 992: { slidesPerView: 2 }, 767: { slidesPerView: 1 } }
-              }} />
+              }} 
+            />
           </Container>
         </motion.section>
     </section>

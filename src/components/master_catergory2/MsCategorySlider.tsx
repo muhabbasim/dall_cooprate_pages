@@ -9,11 +9,13 @@ import { Link } from 'react-router-dom'
 import cooperatesData from 'src/data/CooporateData';
 import { DataProps } from 'src/data/DataProps';
 import { HiArrowLongRight } from "react-icons/hi2";
+import { cn } from 'src/lib/utils';
+import { useSelector } from 'src/store/Store';
 
 
 const MsCategorySlider = (props: any) => {
   const sections = cooperatesData
-
+  const rtl = useSelector(state => state.customizer.activeDir === 'rtl')
     return (
         <div className={props.className}>
             <Swiper
@@ -32,10 +34,17 @@ const MsCategorySlider = (props: any) => {
                                         <h3 className=" -mt-20 -mr-8 mb-10 ml-auto w-20 text-[#fff] text-center pb-4 pt-24 bg-[#f4d956] text-[40px] leading-[3.4rem] font-medium font-serif self-end lg:w-[75px] md:mt-[-50px]">
                                             {i + 1 >= 10 ? "" : "0"}{i + 1}
                                         </h3>
-                                        <h4 className=" font-serif text-darkgray leading-[3rem] p-0 mb-[25px] -tracking-[.5px] lg:mb-[10px] md:text-[27px] text-gray-500 sm:text-[20px]">
-                                            <h4 className="uppercase font-serif text-darkgray leading-[3rem] p-0 mb-[5px] -tracking-[.5px]  md:text-[27px] text-gray-500">
+                                        <h4 className=" font-serif -mt-20 text-darkgray leading-[3rem] p-0 mb-[25px] -tracking-[.5px] lg:mb-[10px] md:text-[27px] text-gray-500 sm:text-[20px]">
+                                            {/* <span className="uppercase font-serif text-darkgray leading-[3rem] p-0 mb-[5px] -tracking-[.5px]  md:text-[27px] text-gray-500">
                                                 {item?.logo_name_en}
-                                            </h4>
+                                            </span> */}
+                                            <div className='flex flex-col gap-4 justify-center items-end'>
+
+                                                <img src={item?.logo} alt="logo" className={cn('w-24')}/>
+                                                <h1 className={cn('text-black m-0 font-bold text-3xl uppercase')}>
+                                                    {rtl ? item.logo_name_ar : item?.logo_name_en}
+                                                </h1>
+                                            </div>
                                             <span className=" text-black font-semibold block mr-[5px] md:inline-block xs:block">
                                                 {item.name}
                                             </span>

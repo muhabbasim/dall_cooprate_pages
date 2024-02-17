@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Translatable from '../translatable_text/Translatable';
+
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
@@ -42,7 +43,7 @@ const BannerSlide = () => {
     ]
 
     return (
-        <section className="home-startup-swiper min-h-[100vh]">
+        <section className="home-startup-swiper min-h-[100vh] ">
             <Swiper
                 className="min-h-[100vh] startup swiper-navigation-04 swiper-navigation-light swiper-pagination-03 swiper-pagination-light swiper-pagination-medium xl:sm-nav-hidden"
                 modules={[Pagination, Navigation, Autoplay, EffectFade]}
@@ -53,7 +54,7 @@ const BannerSlide = () => {
                 keyboard={{ enabled: true, onlyInViewport: true }}
                 fadeEffect={{ crossFade: true }}
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
-                breakpoints={{ 992: { slidesPerView: 1 }, 768: { slidesPerView: 2 } }}
+                breakpoints={{ 767: { pagination: false } }}
                 onSlideChange={(swiperCore) => {
                     const { realIndex } = swiperCore;
                     setActiveSlide(realIndex)
@@ -77,7 +78,7 @@ const BannerSlide = () => {
                                             <motion.h1 initial={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)' }} 
                                                 animate={{ clipPath: activeSlide === i ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)' }} 
                                                 transition={{ duration: 0.5, delay: 0.5, ease: "easeIn" }} 
-                                                className="font-serif font-semibold pb-[10px] text-[70px] tracking-[-2px] text-white mb-[35px] lg:text-[70px] lg:leading-[60px] xs:text-[35px] xs:leading-[40px] xs:mb-[20px]"
+                                                className="font-serif font-semibold pb-[10px] text-[70px] tracking-[-2px] text-white mb-[35px] lg:text-[55px] lg:leading-[60px] sm:text-[15px] xs:leading-[40px] xs:mb-[20px]"
                                             >
                                                 
                                                 <Translatable>

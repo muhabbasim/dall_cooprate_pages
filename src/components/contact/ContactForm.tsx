@@ -50,9 +50,9 @@ const ContactForm = () => {
                         <Col className="mb-16 lg:mb-[25px]">
                           <TextArea className="border-[1px] border-solid border-[#dfdfdf] w-full h-full py-[15px] px-[20px]  resize-none" name="comment" labelClass="h-full sm:h-[200px]" placeholder={t(`Your message`)}></TextArea>
                         </Col>
-                        <Col className="text-left sm:mb-[20px]">
+                        <Col className="text-left h-full sm:mb-[20px]">
                           <Checkbox type="checkbox" name="terms_condition" className="inline-block mt-[4px]" labelClass="flex items-start">
-                            <span className="ml-[10px] text-sm w-[85%] md:w-[90%] xs:w-[85%]">
+                            <span className="ml-[10px] mb-[20px] text-sm w-[85%] md:w-[90%] xs:w-[85%]">
                               <Translatable>
                                 I accept the terms & conditions and I understand that my data will be hold securely in accordance with the
                               </Translatable>
@@ -63,8 +63,8 @@ const ContactForm = () => {
                               </Link>.</span>
                           </Checkbox>
                         </Col>
-                        <Col className=" text-end">
-                          <Buttons type="submit" className={`text-xs tracking-[1px] rounded-none py-[12px] px-[28px] uppercase${isSubmitting ? " loading" : ""}`} themeColor={["#556fff", "#ff798e"]} size="md" color="#fff" title={t(`Send Message`)} />
+                        <Col className=" xl:text-end text-center">
+                          <Buttons type="submit" className={` text-xs tracking-[1px] rounded-none py-[12px] px-[28px] uppercase${isSubmitting ? " loading" : ""}`} themeColor={["#556fff", "#ff798e"]} size="md" color="#fff" title={t(`Send Message`)} />
                         </Col>
                       </Row>
                     </Form>

@@ -1,6 +1,6 @@
-import performingArtLogo from 'src/assets/performing_art/performing_art_logo.png'
-import tourismAuthority from 'src/assets/tourism_autority/tourism_logo.svg'
-import armedForces from 'src/assets/armed_forces/Armed_Forces.png'
+import performingArtLogo from 'src/assets/performing_art/01-1.png'
+import tourismAuthority from 'src/assets/tourism_autority/02.png'
+import armedForces from 'src/assets/armed_forces/03.png'
 import {
   IconAdjustments,
   IconArchive,

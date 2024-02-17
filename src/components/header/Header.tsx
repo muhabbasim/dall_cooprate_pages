@@ -104,6 +104,7 @@ const LpHeader = (props: any) => {
             boxShadow: (theme) => theme.shadows[8],
           },
         }}
+        color='white'
       >
         <MobileSidebar toggleBar={toggleBar}/>
       </Drawer>

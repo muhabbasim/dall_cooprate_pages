@@ -31,14 +31,16 @@ const Logo = ({ toggleBar, data }: Props) => {
       style={{
         display: 'flex',
         alignItems: 'center',
+        justifyContent: 'center',
+        gap: 10
       }}
     >
-      <h1 className={cn('text-white font-bold text-4xl uppercase', toggleBar && 'text-black', !toggleBar && isCat && 'text-black')}>
+      <img src={data?.logo} alt="logo" 
+        className={cn('w-16', toggleBar && 'text-black')}
+      />
+      <h1 className={cn('text-white m-0 font-bold text-3xl uppercase', toggleBar && 'text-black', !toggleBar && isCat && 'text-black')}>
         {rtl ? data?.logo_name_ar : data?.logo_name_en}
       </h1>
-      {/* <img src={data?.logo} alt="logo" 
-        className={cn('w-20', toggleBar && 'text-black')}
-      /> */}
     </LinkStyled>
   );
 };

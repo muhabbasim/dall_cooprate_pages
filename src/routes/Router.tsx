@@ -32,7 +32,7 @@ const Router = [
     children: [
       // Acc routes
       { path: '/:id', element: <LandingPage /> },
-      { path: '/:id/:id/category/:id', element: <Category/>},
+      { path: '/:id/category/:id', element: <Category/>},
     ],
   },
 ];

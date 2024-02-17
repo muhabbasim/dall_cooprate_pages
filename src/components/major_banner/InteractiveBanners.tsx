@@ -6,11 +6,9 @@ import { Autoplay, Navigation, Pagination, EffectFade } from "swiper/modules";
 import PropTypes from "prop-types"
 
 // Components
-import Buttons from '../Button/Buttons'
 import { useLocation } from 'react-router';
 import { DataProps } from 'src/data/DataProps';
 import Translatable from '../translatable_text/Translatable';
-import { useTranslation } from 'react-i18next';
 import { useSelector } from 'src/store/Store';
 
   
@@ -19,14 +17,13 @@ const InteractiveBanners = (props: any) => {
     const swiperRef = React.useRef(null)
     const location = useLocation();
     const pathName = location.pathname.split('/')[1]
-    const {t} = useTranslation()
     const bannerData: DataProps = props?.bannerData
 
     const customizer = useSelector(state => state.customizer.activeDir)
     const rtl = customizer === 'rtl'
     
     return (
-        <div className={`interactivebanners-style-02 hidden md:mr-[-15px] sm:contents ${props.className}`}>
+        <div className={`interactivebanners-style-02  md:mr-[-15px] sm:contents ${props.className}`}>
             {!rtl ? (
                 <Swiper 
                     ref={swiperRef} 
@@ -37,7 +34,7 @@ const InteractiveBanners = (props: any) => {
                     loop={true}
                     keyboard={{ enabled: true, onlyInViewport: true }}
                     autoplay={{ delay: 3000, disableOnInteraction: false }}
-                    breakpoints={{ 992: { slidesPerView: 4 }, 768: { slidesPerView: 2 } }}
+                    breakpoints={{ 992: { slidesPerView: 4 }, 768: { slidesPerView: 1 } }}
                 >
                     {
                         bannerData?.category?.category_data?.map((item: any, i: number) => {
@@ -59,7 +56,13 @@ const InteractiveBanners = (props: any) => {
                                                     {item?.title}
                                                 </Translatable>
                                             </div>}
-                                            {(item?.btnTitle && item?.btnLink) && <Buttons ariaLabel="interactive button" to={`${pathName}/category/${item?.id}`} title={t(`${item?.btnTitle}`)} className="btn-fill btn-fancy rounded-[3px] mt-[15px] font-medium font-serif uppercase md:mb-[15px]" themeColor="#fff" color="#232323" />}
+                                            {(item?.btnTitle && item?.btnLink) && 
+                                                <a href={`${pathName}/category/${item?.id}`}  className="btn rounded-[3px] mt-[15px] uppercase md:mb-[15px]" >
+                                                    <Translatable>
+                                                        {item?.btnTitle}
+                                                    </Translatable>
+                                                </a>
+                                            }
                                         </div>
                                     </div>
                                 </SwiperSlide>
@@ -99,7 +102,14 @@ const InteractiveBanners = (props: any) => {
                                                     {item?.title}
                                                 </Translatable>
                                             </div>}
-                                            {(item?.btnTitle && item?.btnLink) && <Buttons ariaLabel="interactive button" to={`${pathName}/category/${item?.id}`} title={t(`${item?.btnTitle}`)} className="btn-fill btn-fancy rounded-[3px] mt-[15px] font-medium font-serif uppercase md:mb-[15px]" themeColor="#fff" color="#232323" />}
+                                            
+                                            {(item?.btnTitle && item?.btnLink) && 
+                                                <a href={`${pathName}/category/${item?.id}`}  className="btn rounded-[3px] mt-[15px]  font-serif uppercase md:mb-[15px]" color="#232323">
+                                                    <Translatable>
+                                                        {item?.btnTitle}
+                                                    </Translatable>
+                                                </a>
+                                            }
                                         </div>
                                     </div>
                                 </SwiperSlide>
@@ -135,3 +145,6 @@ InteractiveBanners.propTypes = {
 
 
 export default memo(InteractiveBanners)
+
+
+// title={t(`${item?.btnTitle}`)}

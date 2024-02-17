@@ -1,6 +1,6 @@
 
 // Libraries
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'
 import { fadeInLeft } from 'src/components/animation/GlobalAnimations';
 import { useSelector } from 'src/store/Store';
@@ -8,8 +8,6 @@ import { cn } from 'src/lib/utils';
 import Translatable from 'src/components/translatable_text/Translatable';
 
 const Sidebar = (props: any) => {
-    const location = useLocation();
-    const pathName = location.pathname.split('/')[1]
     const rtl = useSelector(state => state.customizer.activeDir === 'rtl')
     
     return (
@@ -22,9 +20,9 @@ const Sidebar = (props: any) => {
                     {props &&  props?.category_data?.map((item: any, i: any) => (
                         <motion.li className='flex mb-[45px]' {...fadeInLeft} key={i}>
                             <figure className="h-[65px] w-[80px] m-0 shrink-0">
-                                <Link aria-label="link" to={`${pathName}/category/${item?.id}`}>
+                                <a aria-label="link" href={`${item?.id}`}>
                                     <img src={item?.img} alt="" className='rounded-[3px] h-[80px] object-cover' />
-                                </Link>
+                                </a>
                             </figure>
                             <div className={cn('leading-normal relative top-[-3px] grow', rtl ? 'pr-[30px]' : 'pl-[30px]')}>
                                 <Link aria-label="link" to={``} className='mb-[5px] sm:mb-0 font-bold inline-block'>

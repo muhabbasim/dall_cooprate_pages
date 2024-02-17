@@ -2,7 +2,7 @@
 // @ts-ignore
 import React, { useState } from 'react';
 
-import Navigations from './Navigations';
+import MobileNavigations from './MobileNavigations';
 
 
 const MobileSidebar = (toggleBar: any) => {
@@ -10,7 +10,7 @@ const MobileSidebar = (toggleBar: any) => {
 
     return (
         <>
-            <Navigations toggleBar={toggleBar}/>
+            <MobileNavigations toggleBar={toggleBar}/>
         </>
     );
 };
