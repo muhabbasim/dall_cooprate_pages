@@ -38,7 +38,7 @@ const MsCategorySlider = (props: any) => {
                                             {/* <span className="uppercase font-serif text-darkgray leading-[3rem] p-0 mb-[5px] -tracking-[.5px]  md:text-[27px] text-gray-500">
                                                 {item?.logo_name_en}
                                             </span> */}
-                                            <div className='flex flex-col gap-4 justify-center items-end'>
+                                            <div className={cn('flex flex-col gap-2 justify-center', rtl ? "items-end" : "items-start")}>
 
                                                 <img src={item?.logo} alt="logo" className={cn('w-24')}/>
                                                 <h1 className={cn('text-black m-0 font-bold text-3xl uppercase')}>
@@ -55,7 +55,7 @@ const MsCategorySlider = (props: any) => {
                                             </p>
                                         }
                                         <Link aria-label="textslider" className="font-medium text-darkgray font-serif no-underline hover:text-[#969896] cursor-pointer" to={`/${item.name}`} >
-                                            <div className='flex items-center gap-4'>
+                                            <div className='flex items-start gap-4'>
                                                 <span className=' text-rose-800 text-xl hover:text-slate-500'>
                                                     Visit website
                                                 </span>

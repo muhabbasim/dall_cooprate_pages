@@ -71,9 +71,9 @@ export default function Banner_center() {
                     </motion.span>
                   </div>
                 </div>
-                <ScrollTo href="#" to="ticket-packages" offset={0} delay={0} spy={true} smooth={true} duration={800}>
+                <a href="https://dall-in.com/auth/register" target='_blank'>
                   <Buttons type="submit" className="btn-fill btn-fancy font-medium border-[#f67a56] font-serif tracking-[1px] rounded-[2px] uppercase md:mb-[15px]" themeColor="#ff7a56" color="#fff" size="lg" title="Register Now" />
-                </ScrollTo>
+                </a>
               </div>
             </Col>
           </Row>

@@ -73,7 +73,7 @@ const LpHeader = (props: any) => {
     <div  
       // position="fixed" 
       // elevation={toggleBar ? 8 : 0}
-      className={cn('fixed z-50 left-0 right-0 bg-transparent transition-all py-2', toggleBar &&  "bg-white shadow", isCat && "border-b")}
+      className={cn('fixed z-50 left-0 right-0 bg-transparent transition-all py-2', toggleBar &&  "bg-white shadow", isCat && "border-b bg-white")}
     >
       <Container maxWidth={'lg'}>
         <ToolbarStyled>

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import './_blockquote.scss'
 import './_dropcaps.scss'
 import './_blog.scss'
+import './buttonStyle.css'
 
 // Libraries
 import { Col, Row } from 'react-bootstrap'
@@ -59,28 +60,40 @@ const PostPage = () => {
                       <motion.div {...fadeInUp}>
                     <Col className="blog-details-text last:mb-0 mb-24">
 
-                      <ul className="flex mb-8 ">
-                        {
-                          data?.date && <li className=" align-middle flex gap-2">
-                            <EventNoteIcon color='primary' className="feather-calendar mr-[10px]"/>
-                            <span>{data?.date}</span>
-                          </li>
-                        }
-                        <li className="align-middle flex gap-2">
-                          <FolderOpenOutlinedIcon color='primary' className="feather-folder  mr-[10px]"/>
+                      <ul className="flex justify-between mb-8 ">
+                        <div className='flex gap-4'>
                           {
-                            data?.category?.map((item: any, i: any) => {
-                              return (
-                                <Link aria-label="link" key={i} to={`#`}>
-                                  <Translatable>
-                                    {item}
-                                  </Translatable>
-                                </Link>
-                              )
-                            })
+                            data?.date && <li className=" align-middle flex gap-2">
+                              <EventNoteIcon color='primary' className="feather-calendar mr-[10px]"/>
+                              <span>{data?.date}</span>
+                            </li>
                           }
+                          <li className="align-middle flex gap-2">
+                            <FolderOpenOutlinedIcon color='primary' className="feather-folder  mr-[10px]"/>
+                            {
+                              data?.category?.map((item: any, i: any) => {
+                                return (
+                                  <Link aria-label="link" key={i} to={`#`}>
+                                    <Translatable>
+                                      {item}
+                                    </Translatable>
+                                  </Link>
+                                )
+                              })
+                            }
+                          </li>
+                        </div>
+                          
+                        <li>
+                          <div className="p-[5px] relative">
+                            <div className="absolute inset-0 py-4 m-auto bg-gradient-to-r from-indigo-500 to-purple-500 rounded-sm" />
+                              <a href="https://dall-in.com/auth/register" target='_blank' className="category_btn px-8 py-[10px] rounded-sm relative group transition duration-200 text-white hover:bg-transparent">
+                                <Translatable>
+                                  Talent Measurement
+                                </Translatable>
+                              </a>
+                          </div>
                         </li>
-                 
                       </ul>
                       <span className="text-2xl font-bold ">
                           <Translatable>
@@ -91,7 +104,7 @@ const PostPage = () => {
                       <p className="mb-[25px]">
                           <Translatable>
                             {data.content}
-                          </Translatable>
+                          </Translatable> 
                       </p>
                       <Blockquote
                         className="my-[3.5rem] ml-24 sm:ml-0"

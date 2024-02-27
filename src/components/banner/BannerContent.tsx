@@ -79,11 +79,11 @@ const BannerContent = (props: DataProps) => {
         }}
       >
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} mt={3}>
-          <button style={{backgroundColor: `${props?.theme?.color_pallete?.btn_secondary}`}} className={`px-10 py-4 rounded-sm font-bold text-white`}>
+          <a href="https://dall-in.com/auth/register" target='_blank' style={{backgroundColor: `${props?.theme?.color_pallete?.btn_secondary}`}} className={`px-10 py-4 rounded-sm font-bold text-white`}>
             <Translatable>
               Book your seat
             </Translatable>
-          </button>
+          </a>
         </Stack>
       </motion.div>
     </Box>
