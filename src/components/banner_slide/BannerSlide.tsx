@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, EffectFade, Autoplay } from "swiper/modules";
 import { motion } from 'framer-motion';
 import { Container, Row, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import Translatable from '../translatable_text/Translatable';
 
 import 'swiper/css';

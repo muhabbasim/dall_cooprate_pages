@@ -1,7 +1,6 @@
 import { Col, Container, Row } from 'react-bootstrap'
 import { Parallax } from 'react-parallax';
 import { motion } from 'framer-motion'
-import { Link as ScrollTo } from "react-scroll"
 import Buttons from '../Button/Buttons'
 import '../../scss/core/_classes.scss'
 import '../../scss/core/_typography.scss'
