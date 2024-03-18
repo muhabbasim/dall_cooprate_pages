@@ -21,8 +21,8 @@ const IconWithText = (props: any) => {
         props?.sponsorship?.map((item: Props, i: any) => {
           return (
             <m.div key={i} className={` col${props.theme ? ` ${props.theme}` : ""}${props.className ? ` ${props.className}` : ""}`} {...{ ...props.animation, transition: { delay: i * props.animationDelay, ease: props.animationTransition, duration: props.animationDuration } }}>
-              <div className="rounded-md flex">
-                { item.logo && <img className='' src={item.logo} alt="" /> }
+              <div className="rounded-md flex w-full h-[150px] items-center justify-center">
+                { item.logo && <img className='w-[200px]' src={item.logo} alt="" /> }
                 {/* { item.name && <h2>{item?.name}</h2>} */}
               </div>
             </m.div>

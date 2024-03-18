@@ -27,7 +27,7 @@ const Features = ({ data, options }: Props) => {
       className={cn('relative px-10 pb-10 cover-background min-h-[100vh] items-center', isPerformingArt && 'text-white')}
     >
        <Container maxWidth="lg" className=''>
-          { options && <Row className=" pt-20  md:absolute md:pt-0 top-[-60px] left-[10%] right-[10%] items-center justify-center">
+          { options && <Row className=" pt-20 md:absolute md:pt-0 top-[-60px] left-[10%] right-[10%] items-center justify-center">
             <Col xs={12} sm={9} lg={12} md={12}>
               <IconWithText sponsorship={data?.features?.sponsorship_data} grid="row-cols-1 row-cols-lg-3 row-cols-md-2 justify-center gap-y-10 z-10 relative" className="rounded-[4px] flex" theme="icon-with-text-04" />
             </Col>

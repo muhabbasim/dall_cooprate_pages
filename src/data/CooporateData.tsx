@@ -21,6 +21,9 @@ import tourism_sponsor_logo1 from 'src/assets/tourism_autority/ministry-of-touri
 import tourism_sponsor_logo2 from 'src/assets/tourism_autority/sta-logo.png'
 import tourism_sponsor_logo3 from 'src/assets/tourism_autority/E3ghWRlXMAMWgI3.jpg'
 
+import forceArmSponsor_logo3 from 'src/assets/armed_forces/Armed_Forces.png'
+import forceArmSponsor_logo2 from 'src/assets/armed_forces/Royal_Saudi_Land_Forces.png'
+import forceArmSponsor_logo1 from 'src/assets/armed_forces/force_logo.jpg'
 // import armedForces_sponsor_logo1 from 'src/assets/armed_forces/Armed_Forces.png'
 // import armedForces_sponsor_logo2 from 'src/assets/armed_forces/Royal_Saudi_Land_Forces.png'
 // import armedForces_sponsor_logo3 from 'src/assets/armed_forces/h_logo.png'
@@ -1037,17 +1040,17 @@ const cooperatesData = [
         { 
           id: 1,
           name: '',
-          logo: tourism_sponsor_logo1
+          logo: forceArmSponsor_logo1
         },
         { 
           id: 2,
           name: '',
-          logo: tourism_sponsor_logo2
+          logo: forceArmSponsor_logo2
         },
         { 
           id: 3,
           name: '',
-          logo: tourism_sponsor_logo3
+          logo: forceArmSponsor_logo3
         },
       ],
 
