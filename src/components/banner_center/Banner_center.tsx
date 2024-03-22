@@ -5,6 +5,7 @@ import Buttons from '../Button/Buttons'
 import '../../scss/core/_classes.scss'
 import '../../scss/core/_typography.scss'
 import Translatable from '../translatable_text/Translatable';
+import forceHero from 'src/assets/armed_forces/heroForces.jpeg'
 
 export default function Banner_center() {
 
@@ -14,7 +15,7 @@ export default function Banner_center() {
       <Parallax 
         className="lg-no-parallax w-full h-[100vh]" 
         strength={300}
-        bgImage='https://images.unsplash.com/photo-1593625240542-8342965fe160?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+        bgImage={forceHero}
       >
         <div className="absolute h-[100vh] w-full opacity-60 top-0 left-0 bg-gray-700x bg-[#241526a5] "></div>
         <Container className="relative">

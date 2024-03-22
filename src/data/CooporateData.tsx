@@ -24,7 +24,6 @@ import tourism_sponsor_logo3 from 'src/assets/tourism_autority/E3ghWRlXMAMWgI3.j
 import forceArmSponsor_logo3 from 'src/assets/armed_forces/Armed_Forces.png'
 import forceArmSponsor_logo2 from 'src/assets/armed_forces/Royal_Saudi_Land_Forces.png'
 import forceArmSponsor_logo1 from 'src/assets/armed_forces/force_logo.jpg'
-// import armedForces_sponsor_logo1 from 'src/assets/armed_forces/Armed_Forces.png'
 // import armedForces_sponsor_logo2 from 'src/assets/armed_forces/Royal_Saudi_Land_Forces.png'
 // import armedForces_sponsor_logo3 from 'src/assets/armed_forces/h_logo.png'
 
