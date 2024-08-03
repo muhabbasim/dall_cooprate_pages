@@ -1,7 +1,6 @@
 import performingArtLogo from 'src/assets/performing_art/01-1.png'
 import tourismAuthority from 'src/assets/tourism_autority/02.png'
 import armedForces from 'src/assets/armed_forces/03.png'
-import hd_dev from 'src/assets/hr_development/hr_dev_logo2.png'
 import {
   IconAdjustments,
   IconArchive,
@@ -27,6 +26,8 @@ import forceArmSponsor_logo2 from 'src/assets/armed_forces/Royal_Saudi_Land_Forc
 import forceArmSponsor_logo1 from 'src/assets/armed_forces/force_logo.jpg'
 // import armedForces_sponsor_logo2 from 'src/assets/armed_forces/Royal_Saudi_Land_Forces.png'
 // import armedForces_sponsor_logo3 from 'src/assets/armed_forces/h_logo.png'
+// import hd_dev from 'src/assets/hr_development/hr_dev_logo2.png'
+
 
 
 //additional sections
