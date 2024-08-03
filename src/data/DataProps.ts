@@ -12,6 +12,7 @@ export type DataProps = {
 
   name: string;  
   logo: any;  
+  logoSize: null | number,
   logo_name_en: string;
   logo_name_ar: string;
   

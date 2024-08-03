@@ -13,6 +13,7 @@ import cooperatesData from 'src/data/CooporateData';
 import BannerSlide from 'src/components/banner_slide/BannerSlide';
 import CategoryBanner from 'src/components/major_banner/CategoryBanner';
 import Banner_center from 'src/components/banner_center/Banner_center';
+// import BannerFixed from 'src/components/banner_fixed/BannerFixed';
 // import MasterCategory from 'src/components/master_category/MasterCategory';
 // import SimpleCategory from 'src/components/simple_category/SimpleCategory';
 
@@ -29,20 +30,25 @@ const Landingpage = () => {
   }, [currenLand]);
   
   let landBanner;
+  let title;
   
   if( currenLand?.name === 'tourism_authority') {
     landBanner = <BannerSlide/>
+    title = 'Duhal'
   } else if (currenLand?.name === 'performing_art') {
     landBanner = <Banner {...currenLand}/>
+    title = 'Midar'
   } else if (currenLand?.name === 'armed_forces') {
     landBanner = <Banner_center/>
+    title = 'Nislan'
   }
+
 
   
   return (
     <div className='overflow-hidden'>
       { currenLand &&  (
-        <PageContainer title="Landingpage" description="this is Landingpage">
+        <PageContainer title={title} logo={currenLand.logo} description="this is Landingpage">
           <div>
             {landBanner}
           </div>

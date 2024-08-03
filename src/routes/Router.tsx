@@ -13,7 +13,6 @@ const Login = Loadable(lazy(() => import('../pages/auth/login/Login')));
 const NotFound = Loadable(lazy(() => import('../pages/error/Error')));
 const Category = Loadable(lazy(() => import('../pages/category/CategoryPage')));
 
-
 const Router = [
   {
     path: '/',
@@ -24,6 +23,7 @@ const Router = [
       { path: '/auth/login', element: <Login /> },
       { path: '/error_page', element: <NotFound/>},
       { path: '*', element: <NotFound/>},
+
     ],
   },
   {
