@@ -27,14 +27,16 @@ const BannerContent = (props: DataProps) => {
         }}
       >
         <Typography
-          variant="h1"
+          // variant="h1"
           fontWeight={900}
           sx={{
             fontSize: {
-              md: '54px',
+              md: '64px',
+              xs: '34px',
             },
             lineHeight: {
-              md: '60px',
+              md: '80px',
+              xs: '60px',
             },
             color: 'white'
           }}
@@ -43,7 +45,17 @@ const BannerContent = (props: DataProps) => {
             {props?.hero?.hero_title}
           </Translatable>
           <br/>
-          <Typography style={{ color: `${props?.theme?.color_pallete?.third}`}} component={'span'} variant="inherit">
+          <Typography style={{ color: `${props?.theme?.color_pallete?.third}`}} component={'span'} sx={{
+            fontSize: {
+              md: '64px',
+              xs: '44px',
+            },
+            lineHeight: {
+              md: '10px',
+              xs: '50px',
+            },
+            color: 'white'
+          }}>
             <Translatable>
               {props?.hero?.hero_title2}
             </Translatable>
@@ -61,7 +73,7 @@ const BannerContent = (props: DataProps) => {
             delay: 0.2,
           }}
         >
-          <Typography variant="h5" fontWeight={300} maxWidth={600} color={'white'}>
+          <Typography variant="h2" fontWeight={300} maxWidth={700} color={'white'}>
             <Translatable>
               {props?.hero?.hero_cta}
             </Translatable>

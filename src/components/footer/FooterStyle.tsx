@@ -17,6 +17,7 @@ import { FooterContainer } from './FooterContainer';
 import FooterMenu from './FooterContainer'
 import { IconMail } from '@tabler/icons-react';
 import { DataProps } from 'src/data/DataProps';
+import Translatable from '../translatable_text/Translatable';
 
 
 const FooterStyle = (props: DataProps) => {
@@ -25,15 +26,19 @@ const FooterStyle = (props: DataProps) => {
             <div className="md:py-[50px]">
                 <Container >
                     <Row className="justify-between">
-                        <Col lg={{ span: 3, order: 0 }} sm={{ span: 6, order: 1 }} className="md:mb-[40px] xs:mb-[25px]">
+                        <Col lg={{ span: 5, order: 0 }} sm={{ span: 6, order: 1 }} className="md:mb-[40px] xs:mb-[25px]">
                             <Link aria-label="link" to="/" className="mb-[25px] block">
                                 {props?.logo ? (
-                                    <img src={props.logo} alt="logo" width="111" height="36" />
+                                    <img src={props.logo} alt="logo" width="100" height="36" />
                                 ) : (
                                     <p>logo</p>
                                 )}
                             </Link>
-                            <p className="w-full text-gray-400 text-lg md:w-[80%] mb-[30px] xs:w-11/12">Lorem ipsum dolor amet consectetur adipiscing elit do eiusmod tempor incididunt ut labore et dolore.</p>
+                            <p className="w-full text-gray-400 text-lg md:w-[80%] mb-[30px] xs:w-11/12">
+                                <Translatable>
+                                    Platform that analyze data using artificial intelligence to extract academic, personal, and behavioral capabilities
+                                </Translatable>
+                            </p>
                         </Col>
                         <FooterMenu data={FooterData.slice(0, 2)} lg={{ span: 2, order: 0 }} sm={{ span: 6, order: 2 }} className="xs:mb-[25px]" titleClass="text-black" />
                         <Col xl={{ span: 3 }} lg={{ span: 4, order: 0 }} sm={{ span: 6, order: 3 }} md={5}>

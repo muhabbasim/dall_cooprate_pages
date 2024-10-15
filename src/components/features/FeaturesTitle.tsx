@@ -10,22 +10,21 @@ const FeaturesTitle = (data: DataProps) => {
 
     return (
         <Grid container className='h-[150px] w-[700px] ' spacing={3} justifyContent="center">
-            <Grid item xs={12} sm={10} lg={8}>
-                <Typography fontSize="16" textTransform="uppercase" fontWeight={500} textAlign="center" mb={1}>
+            <Grid item xs={12} sm={10} lg={12}>
+                <Typography style={{ color: `${data?.theme?.color_pallete?.third}`}} fontSize="36px" textTransform="uppercase" fontWeight={200} textAlign="center" mb={3}>
                     <Translatable>
                         {data?.features?.feature_title}
                     </Translatable>
                 </Typography>
-                <Typography fontWeight={700} textAlign="center" sx={{
+                <Typography fontWeight={600} textAlign="center" sx={{
                     fontSize: {
-                        lg: '36px',
-                        xs: '25px'
+                        lg: '46px',
+                        xs: '35px'
                     },
                     lineHeight: {
                         lg: '43px',
-                        xs: '30px'
+                        xs: '35px'
                     },
-
                 }}>
                     <Translatable>
                         {data?.features?.feature_sub}

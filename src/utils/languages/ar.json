@@ -5,7 +5,6 @@
     "Request details": " تفاصيل الطلب",
     "Home": "الرئيسية",
     "Contact us": "تواصل معنا",
-    "Categories": "الأقسام",
     "View information": "تفاصيل أكثر",
     "Features": "المميزات",
     "Register": "التسجيل",
@@ -68,7 +67,7 @@
     "": "",
     
     "Reaching New Heights": "الوصول إلى آفاق جديدة",
-    "Duhal Features & goal, Journeying Towards Success": "دحل، رحلة نحو النجاح ",
+    "Duhal Features & goal, Journeying Towards Success": "دحل، رحلة نحو للنجاح ",
 
     "Tour Guide": "مرشد سياحي",
     "Historical, cultural, and natural landmarks": "المعالم التاريخية والثقافية والطبيعية",
@@ -109,16 +108,16 @@
     "Hospitality Assistant": "مساعد ضيافة",
     "Enhancing Hospitality, Crafting Smiles": "تعزيز الضيافة، صناعة الابتسامات",
     "Hospitality assistants provide support in various areas within the hospitality industry, including housekeeping, food service, or customer service. They play a vital role in ensuring the comfort and satisfaction of guests by assisting with day-to-day operations": "يقدم مساعدو الضيافة الدعم في مجالات متنوعة داخل صناعة الضيافة، بما في ذلك أعمال النظافة، وخدمة الطعام، أو خدمة العملاء. يلعبون دورًا حيويًا في ضمان راحة ورضا الضيوف من خلال المساهمة في العمليات اليومية",
-    "": "",
     
-        
+    
+    "Project Dahl uses advanced algorithms to discover hidden potential in tourism workers and guide them to the field that best matches their passion, enabling them to create vibrant, personal experiences for tourists": "يهدف مشروع دحل إلى اكتشاف الكنوز الكامنة في كل فرد يعمل في قطاع السياحة وتوجيهه نحو التخصص الأنسب لشغفه وطموحه باستخدام خوارزميات متقدمة، مما يساعده على تقديم تجربة سياحية مفعمة بالحماس تجعل السائح يشعر وكأنه مع صديق قديم",
 
 
     "Performing art vision": "رؤية الفنون الأدائية",
     "Stimulating the development of the theater and performing arts sectors, fostering them through empowering Saudi talents to build successful careers and create content that inspires the audience": "تحفيز تطوير قطاعي المسرح والفنون الأدائية، وتعزيزهما من خلال تمكين المواهب السعودية لبناء مسارات مهنية ناجحة وإنشاء محتوى يلهم الجمهور",
     "Experience the magic of performing arts, where every stage is a canvas for masterpieces to unfold": "استمتع بسحر الفنون الأدائية، حيث يكون كل مسرح قماشًا لتظهر عليه الأعمال الفنية الرائعة",
 
-    "Midar Milestones": "إنجازات ميدار",
+    "Midar Milestones": "أهداف ميدار",
     "Midar's Ambitious Aspirations Reflected in the Project Features": "تجسيد تطلعات ميدار الطموحة في خصائص وميزات المشروع",
 
     "Playwright": "كاتب نص",
@@ -188,7 +187,7 @@
     "Explore Your Strengths Now!": "استكشف قوتك الآن!",
 
     "Tailored Just For You!": "مصممة خصيصًا لك!",
-    "Your Duhal journey has led us to personalized recommendations. Explore where your strengths shine the brightest. Let's tailor your tourism path!": "سفرتك مع دوحل قادتنا إلى توصيات شخصية. اكتشف حيث تتألق قوتك بشكل أكبر. دعونا نصمم لك مسار سياحي!",
+    "Your Duhal journey has led us to personalized recommendations. Explore where your strengths shine the brightest. Let's tailor your tourism path!": "سفرتك مع دحل قادتنا إلى توصيات شخصية اكتشف حيث تتألق قوتك بشكل أكبر دعونا نصمم لك مسار سياحي!",
     "Let's Get Started!": "لنبدأ الآن!",
 
     "Adventure Awaits – Explore Opportunities!": "المغامرة في انتظارك – استكشف الفرص!",
@@ -197,7 +196,7 @@
     "Embark on Your Duhal Adventure!": "ابدأ في مغامرتك مع دحل!",
     "Are you prepared for an extraordinary journey? Your Duhal adventure commences now! Let the exploration begin": "هل أنت مستعد لرحلة استثنائية؟ تبدأ مغامرتك مع دوحل الآن! دع الاستكشاف يبدأ الآن!",
  
-    "Duhal, Journeying Towards Success": "دحل، رحلة نحو النجاح",
+    "Duhal, Journeying Towards Success": "دحل، رحلة نحو للنجاح",
 
 
 
@@ -263,17 +262,70 @@
     "Discover the world!": "اكتشف العالم من حولك",
 
     "Talent Measurement": "قياس المواهب",
-    "": "",
+
+    "Our overall objectives": "أهدافنا العامة",
+    "AI-Powered Algorithms": "الخوارزميات المدعومة بالذكاء الاصطناعي",
+    "Evaluating Personal, and Career Suitability": "تقييم الملاءمة الشخصية والمهنية",
+    "Our specialized algorithms analyze data using artificial intelligence to extract valuable insights about academic, personal, and behavioral capabilities, as well as an individual’s suitability for jobs, positions, and careers": "يهدف مشروع “ميدار” إلى تقديم نظام فعّال وشامل يساعد هيئة المسرح والفنون الأدائية في تعريف تخصصاتها و تصنيف المتقدمين على برامجها التدريبية بشكل يتماشى مع قدراتهم الفعلية في المجال المسرحي و يتم ذلك من خلال اختبارات تقنية تعتمد على خوارزمية مبتكرة، مما يزيد دقة تقييم الموهبة ويساعد في تحديد القدرات المسرحية الفريدة لكل متقدم",
     
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "Start know": "استكشف مكامن قوتك!",
+    "Discover more topics": "اكتشف مجالات أكثر",
+    "Categories": "الفئات",
+    "Category Tags": "وسوم الفئات",
+    "A tour guide’s day-to-day activities involve planning and conducting tours, whether in historical landmarks, natural parks, or urban areas. They are responsible for researching the sites they cover to deliver accurate and captivating information. Guides must also adapt their presentations to suit different audiences, which may include school groups, foreign tourists, or professionals.": "",
+    "Tour guides often possess degrees in tourism, history, or a related field, although practical experience and local knowledge can be equally valuable. Many guides pursue certifications or licenses, depending on the regulations of the region they operate in. Key skills include excellent verbal communication, public speaking, organizational abilities, and a passion for storytelling.": "",
+    "A chef’s primary responsibility is to develop and execute menus that reflect their culinary vision and meet the expectations of their clientele. This involves researching food trends, experimenting with flavors, and considering dietary restrictions. Chefs also oversee the preparation and presentation of food, ensuring consistency in quality and taste.": "",
+    "Chefs are the creative force behind culinary experiences in restaurants, hotels, and other food service establishments. Their artistry transforms raw ingredients into delightful dishes that not only please the palate but also create memorable dining experiences. The role of a chef encompasses a broad range of responsibilities, from menu creation to staff management.": "",
+    "Receptionists serve as the first point of contact in various organizations, from hotels to corporate offices, and play a crucial role in shaping visitors’ first impressions. Their responsibilities encompass a wide range of administrative and customer service tasks, making them integral to the smooth operation of any business.": "",
+    "A receptionist’s duties often include greeting guests, answering phone calls, managing appointment schedules, and handling correspondence. They may be responsible for maintaining the reception area, ensuring it is organized and welcoming. In hospitality settings, receptionists manage check-in and check-out processes, assist with reservations, and provide information about services and amenities.": "",
+    "Archaeological restorers are specialized professionals dedicated to preserving and restoring artifacts and structures uncovered during archaeological excavations. Their work is critical in ensuring that historical objects are maintained in a manner that respects their integrity and context, allowing future generations to study and appreciate them.": "",
+    "Accommodation managers oversee the daily operations of hotels, hostels, and other lodging facilities, ensuring that guests have a positive and comfortable experience. Their role is multifaceted, involving management, customer service, and financial oversight.": "",
+    "The primary duties of an accommodation manager include supervising staff, managing budgets, and ensuring compliance with health and safety regulations. They develop and implement policies to improve service quality and guest satisfaction while handling reservations and inquiries.": "",
+    "Tourism events organizers are responsible for planning and executing events that attract visitors and promote tourism within a region. Their role involves a blend of creativity, project management, and logistical coordination to ensure that events are successful and memorable.": "",
+    "A tourism events organizer’s tasks include conceptualizing event themes, managing budgets, securing venues, and coordinating with vendors and sponsors. They are responsible for marketing the events to attract participants and managing logistics such as permits, transportation, and accommodations.": "",
+    "Historical experts are professionals dedicated to studying, analyzing, and interpreting historical events, cultures, and societies. Their work is essential for understanding the past and its implications for the present and future.": "",
+    "Historical experts conduct extensive research using primary and secondary sources, such as documents, artifacts, and oral histories. They may specialize in specific periods, regions, or themes, providing insights through publications, lectures, and presentations. Their expertise is often sought by museums, educational institutions, and media outlets.": "",
+    "Hospitality assistants support the operations of hotels, restaurants, and other service-oriented establishments, ensuring guests have a pleasant and seamless experience. Their role is dynamic and can involve various tasks depending on the needs of the business.": "",
+    "The primary responsibilities of hospitality assistants include assisting with front desk operations, managing reservations, and providing customer service. In hotels, they may help with check-ins and check-outs, answer guest inquiries, and coordinate services. In restaurants, they might assist with food and beverage service, ensuring that guests receive timely and courteous service": "",
     
+    
+    "The “Electronic Exhibition for Ministry of Tourism Specializations” is an interactive platform offering information on tourism careers and guides individuals to suitable paths through interactive tools": "المعرض الإلكتروني لتخصصات وزارة السياحة” هو منصة تفاعلية توفر معلومات شاملة حول تخصصات وفرص العمل في قطاع السياحة، مع توجيه الأفراد نحو المسارات المهنية الأنسب لهم من خلال أدوات تفاعلية مثل اختبارات تحديد التخصص",
+    "Tourism Authority Exhibition": "معرض هيئة السياحة",
+
+    "Empowering National Talents": "تمكين الكفاءات الوطنية",
+    "Achieving alignment between national competencies and the needs of the artistic job market": "تحقيق توافق بين الكفاءات والمواهب الوطنية واحتياجات سوق العمل الفني",
+    "Assessing Theater Talents": "تقييم المواهب المسرحية",
+    "Ensuring the presence of general theatrical talent in candidates and connecting them with relevant entities": "التأكد من وجود موهبة مسرحية عامة لدى المترشح وإمكانية ربطه بالجهات المعنية",
+    "Discovering Innate Abilities": "اكتشاف القدرات الفطرية",
+    "Exploring the innate talents and capabilities of applicants in the field of theater": "استكشاف المواهب والقدرات الفطرية للمتقدمين في مجال المسرح",
+    "Providing Job Information": "توفير معلومات وظيفية",
+    "Offering comprehensive information about job opportunities in theater sectors and measuring capability in each specialization": "تقديم معلومات شاملة عن وظائف قطاعات المسرح وقياس القدرة على كل تخصص",
+    "Increasing Return on Investment": "زيادة العائد على الاستثمار",
+    "Achieving higher returns on investment by leveraging suitable competencies in training and employment": "تحقيق عائد أعلى على الاستثمار من خلال استثمار الكفاءات المناسبة في التدريب والتوظيف",
+    "Building a Strategic Inventory": "بناء مخزون استراتيجي",
+    "Creating a strategic inventory of theatrical talents across all cities in Saudi Arabia": "إنشاء مخزون استراتيجي من القدرات المسرحية في جميع المدن السعودية",
+    
+    "Empowering National Competencies": "تمكين الكفاءات الوطنية",
+    "Enhancing alignment between national competencies and the needs of the tourism job market": "تعزيز توافق الكفاءات الوطنية مع احتياجات سوق العمل السياحي",
+    "Electronic Linking Tool": "أداة الربط الإلكترونية",
+    "Providing an electronic tool to connect vacancies in the tourism sector to ensure labor market sustainability": "توفير أداة إلكترونية لربط شواغر القطاع السياحي لضمان استدامة سوق العمل",
+    "Exploring the innate talents and capabilities of applicants in the field of tourism": "استكشاف القدرات والمواهب الفطرية للمتقدمين في مجال السياحة",
+    "Offering comprehensive information about job opportunities in tourism sectors and measuring capability in each specialization": "تقديم معلومات شاملة عن وظائف قطاعات السياحة وقياس القدرة في كل تخصص",
+    "Achieving higher returns on investment in training and employment by hiring suitable competencies": "تحقيق عائد أعلى على الاستثمار في التدريب والتوظيف من خلال توظيف الكفاءات المناسبة",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
     "": "",
     "": "",
     "": "",
     "": "",
     "": ""
+ 
 }

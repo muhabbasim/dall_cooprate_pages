@@ -29,10 +29,18 @@ export type DataProps = {
     hero_images: any;
   }; 
 
+  definition: {
+    def_title: string;
+    def_title2: string;
+    def_cta: string;
+    def_img: any;
+  };
+
   features: {
     feature_title: string;
     feature_sub: string;
     features_data: any;
+    feature_color?: string;
     feature_background: any
     feature_sponsorship: boolean,
     sponsorship_data: any;
@@ -43,6 +51,8 @@ export type DataProps = {
     title_sub: string;
     title_sub_desc: string;
     category_data: any;
+    cat_bg?: any;
+    cat_color?: string;
   }
 
   contact: {

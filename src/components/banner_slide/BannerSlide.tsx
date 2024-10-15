@@ -34,7 +34,8 @@ const BannerSlide = () => {
 
         },
         {
-            img: "https://images.unsplash.com/photo-1682687220499-d9c06b872eee?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            // img: "https://images.unsplash.com/photo-1682687220499-d9c06b872eee?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            img: "https://images.unsplash.com/photo-1682685797365-41f45b562c0a?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             title: "Embark on Your Duhal Adventure!",
             subTitle: "Are you prepared for an extraordinary journey? Your Duhal adventure commences now! Let the exploration begin",
             CTA: "Explore Your Strengths Now!"
@@ -77,15 +78,14 @@ const BannerSlide = () => {
                                             <motion.h1 initial={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)' }} 
                                                 animate={{ clipPath: activeSlide === i ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)' }} 
                                                 transition={{ duration: 0.5, delay: 0.5, ease: "easeIn" }} 
-                                                className="font-serif font-semibold pb-[10px] text-[70px] tracking-[-2px] text-white mb-[35px] lg:text-[55px] lg:leading-[60px] sm:text-[15px] xs:leading-[40px] xs:mb-[20px]"
+                                                className="font-serif font-semibold pb-[10px] text-[70px] tracking-[-2px] text-white mb-[35px] lg:text-[75px] md:text-[55px] lg:leading-[80px] xs:leading-[20px] xs:mb-[20px]"
                                             >
-                                                
                                                 <Translatable>
                                                     {item.title}
                                                 </Translatable>
                                             </motion.h1>
                                             
-                                            <motion.span initial={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)' }} animate={{ clipPath: activeSlide === i ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)' }} transition={{ duration: 0.5, delay: 0.8, ease: "easeIn" }} className="font-serif block text-[19px] leading-[28px] mb-[35px] max-w-[400px]x font-light text-white xs:text-base xs:mb-[20px]">
+                                            <motion.span initial={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)' }} animate={{ clipPath: activeSlide === i ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)' }} transition={{ duration: 0.5, delay: 0.8, ease: "easeIn" }} className="font-serif block text-[39px] leading-[38px] mb-[35px] max-w-[400px]x font-light text-white xs:text-base xs:mb-[20px]">
                                                 <Translatable>
                                                     {item.subTitle}
                                                 </Translatable>

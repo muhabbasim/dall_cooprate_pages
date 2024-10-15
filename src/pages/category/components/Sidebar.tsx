@@ -15,7 +15,7 @@ const Sidebar = (props: any) => {
     
        
             <div className='mb-20 xs:mb-[35px]'>
-                <span className='mb-[35px] text-lg font-bold block'>Discover more topics</span>
+                <span className='mb-[35px] text-lg font-bold block'><Translatable>Discover more topics</Translatable></span>
                 <ul className='max-h-[380px] overflow-scroll'>
                     {props &&  props?.category_data?.map((item: any, i: any) => (
                         <motion.li className='flex mb-[45px]' {...fadeInLeft} key={i}>
@@ -49,14 +49,14 @@ const Sidebar = (props: any) => {
                 </ul>
             </div>
             <motion.div className='visible mb-20 md:w-[90%] sm:w-full' {...fadeInLeft}>
-                <span className='mb-[35px] font-bold text-lg block'>Category Tags</span>
+                <span className='mb-[35px] font-bold text-lg block'> <Translatable>Category Tags</Translatable></span>
                 <Link aria-label="tag" to="#" className='inline-block text-center text-sm mt-0 ml-[6px] mb-[10px] mr-0 pt-[5px] px-[18px] pb-[6px] rounded-[4px] border-mediumgray border hover:text-[#828282] hover:shadow-[0_0_15px_rgba(0,0,0,0.1)]'>Tourism</Link>
                 <Link aria-label="tag" to="#" className='inline-block text-center text-sm mt-0 ml-[6px] mb-[10px] mr-0 pt-[5px] px-[18px] pb-[6px] rounded-[4px] border-mediumgray border hover:text-[#828282] hover:shadow-[0_0_15px_rgba(0,0,0,0.1)]'>Mountains</Link>
                 <Link aria-label="tag" to="#" className='inline-block text-center text-sm mt-0 ml-[6px] mb-[10px] mr-0 pt-[5px] px-[18px] pb-[6px] rounded-[4px] border-mediumgray border hover:text-[#828282] hover:shadow-[0_0_15px_rgba(0,0,0,0.1)]'>Lifestyle</Link>
                 <Link aria-label="tag" to="#" className='inline-block text-center text-sm mt-0 ml-[6px] mb-[10px] mr-0 pt-[5px] px-[18px] pb-[6px] rounded-[4px] border-mediumgray border hover:text-[#828282] hover:shadow-[0_0_15px_rgba(0,0,0,0.1)]'>Hotel</Link>
             </motion.div>
             <div className='mb-20 xs:mb-[35px]'>
-                <span className="mb-[35px] font-bold text-lg block" {...fadeInLeft}>Categories</span>
+                <span className="mb-[35px] font-bold text-lg block" {...fadeInLeft}> <Translatable>Categories</Translatable></span>
                 <motion.ul className="pl-0" {...fadeInLeft}>
                     <li className='relative inline-block w-full mb-[15px] leading-[18px]'>
                         <Link aria-label="link" to="#" className='inline-block text-left'>Entertainment</Link>

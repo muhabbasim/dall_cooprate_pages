@@ -13,7 +13,7 @@ const Banner = ( props: DataProps ) => {
         // backgroundAttachment: 'fixed',
         backgroundSize: 'cover',
       }} 
-      className={cn(`hero_containerx= `)} 
+      className={cn(`hero_container `)} 
       sx={{ overflow: 'hidden', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
     >
       <Container maxWidth="lg">

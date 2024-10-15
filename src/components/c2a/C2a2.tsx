@@ -35,7 +35,7 @@ const C2a2 = (data: DataProps) => {
             <Grid item xs={12} sm={12} lg={12}>
               <div className=' md:flex items-center justify-between'>
 
-                <Typography variant="h2" maxWidth={600} color="background.paper" fontWeight={700} >
+                <Typography variant="h2" maxWidth={600} color="background.paper" fontWeight={700}>
                   <Translatable>
                     {data?.hero?.hero_title} 
                   </Translatable>
@@ -48,8 +48,9 @@ const C2a2 = (data: DataProps) => {
                 <StyledButton2
                   variant="outlined"
                   color="inherit"
-                  href="/auth/register"
-                  >
+                  href="https://dall-in.com/auth/login"
+                  // target="_blank" 
+                >
                   <Translatable>
                     Start Now
                   </Translatable>
@@ -59,7 +60,6 @@ const C2a2 = (data: DataProps) => {
           </Grid>
         </Container>
       </Box>
-
     </Box>
   );
 };

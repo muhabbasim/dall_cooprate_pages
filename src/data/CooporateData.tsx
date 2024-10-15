@@ -11,6 +11,7 @@ import {
   IconTag,
   IconWand,
 } from '@tabler/icons-react';
+
 import BannerSlide from "src/components/banner_slide/BannerSlide";
 import CategoryBanner from "src/components/major_banner/CategoryBanner";
 import performingArtFeatureBg from 'src/assets/performing_art/bg5.avif'
@@ -21,18 +22,17 @@ import tourism_sponsor_logo1 from 'src/assets/tourism_autority/ministry-of-touri
 import tourism_sponsor_logo2 from 'src/assets/tourism_autority/sta-logo.png'
 import tourism_sponsor_logo3 from 'src/assets/tourism_autority/E3ghWRlXMAMWgI3.jpg'
 
-import forceArmSponsor_logo3 from 'src/assets/armed_forces/Armed_Forces.png'
-import forceArmSponsor_logo2 from 'src/assets/armed_forces/Royal_Saudi_Land_Forces.png'
-import forceArmSponsor_logo1 from 'src/assets/armed_forces/force_logo.jpg'
+import forceArmSponsor_logo3 from 'src/assets/armed_forces/force_logo3.jpg'
+import forceArmSponsor_logo2 from 'src/assets/armed_forces/force_logo2.png'
+import forceArmSponsor_logo1 from 'src/assets/armed_forces/force_logo.png'
+
 // import armedForces_sponsor_logo2 from 'src/assets/armed_forces/Royal_Saudi_Land_Forces.png'
 // import armedForces_sponsor_logo3 from 'src/assets/armed_forces/h_logo.png'
 // import hd_dev from 'src/assets/hr_development/hr_dev_logo2.png'
 
 
-
-//additional sections
+// additional sections
 import SimpleCategory from 'src/components/simple_category/SimpleCategory';
-
 
 const cooperatesData = [
   {
@@ -41,7 +41,6 @@ const cooperatesData = [
     logo_name_ar: 'دحل',
     logo: tourismAuthority,
     logoSize: 16,
-
 
     navbar: {
       name: 'tourism_uthority',
@@ -75,12 +74,20 @@ const cooperatesData = [
       banner_component: <BannerSlide/>,
     },
 
+    definition: {
+      def_title: 'AI-Powered Algorithms',
+      def_title2: 'Evaluating Personal, and Career Suitability',
+      def_cta: "Project Dahl uses advanced algorithms to discover hidden potential in tourism workers and guide them to the field that best matches their passion, enabling them to create vibrant, personal experiences for tourists",
+      def_img: 'https://images.unsplash.com/photo-1682687221080-5cb261c645cb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    },
+    
     features: {
       
-      feature_title: "Reaching New Heights",
+      feature_title: "Our overall objectives",
       feature_sub: "Duhal, Journeying Towards Success",
       feature_background: tourismFeatureBg,
       feature_sponsorship: true,
+      feature_color: "green",
       sponsorship_data: [
         { 
           id: 1,
@@ -98,77 +105,59 @@ const cooperatesData = [
           logo: tourism_sponsor_logo3
         },
       ],
+
       features_data: [
+     
         { 
           id: 1,
           icon: IconWand,
-          title: 'Talent Potentials',
-          subtext: "Unveiling the latent potential of individuals across diverse professional domains",
+          title: 'Empowering National Competencies',
+          subtext: "Enhancing alignment between national competencies and the needs of the tourism job market",
         },
         {
           id: 2,
           icon: IconShieldLock,
-          title: 'Success Probability',
-          subtext: "Furnishing relative reports assessing the probability of success within specific professional realms",
+          title: 'Electronic Linking Tool',
+          subtext: "Providing an electronic tool to connect vacancies in the tourism sector to ensure labor market sustainability",
         },
         {
           id: 3,
           icon: IconArchive,
-          title: 'Employment Quality',
-          subtext: "Enhancing employability and elevating the quality of employment outcomes through Streamlining the connection process between entities",
+          title: 'Discovering Innate Abilities',
+          subtext: "Exploring the innate talents and capabilities of applicants in the field of tourism",
         },
         {
           id: 4,
           icon: IconAdjustments,
-          title: 'Fostering Creativity',
-          subtext: 'Fostering impactful creativity by strategically directing energy in professional arenas',
+          title: 'Providing Job Information',
+          subtext: 'Offering comprehensive information about job opportunities in tourism sectors and measuring capability in each specialization',
         },
         {
           id: 5,
           icon: IconTag,
-          title: 'Localized Analysis',
-          subtext: "Implementing a discerning selection process grounded in localized Saudi analytical attributes",
+          title: 'Increasing Return on Investment',
+          subtext: "Achieving higher returns on investment in training and employment by hiring suitable competencies",
         },
-        {
-          id: 7,
-          icon: IconCalendar,
-          title: 'Financial Optimiztion',
-          subtext: "Optimizing financial expenditures through judicious investments in apt talents",
-        },
-        {
-          id: 8,
-          icon: IconMessages,
-          title: 'Strategic Approaches',
-          subtext: "Formulating well-suited future strategies aligned with the ever-evolving job market",
-        },
-        {
-          id: 9,
-          icon: IconDiamond,
-          title: 'personalized Allocation',
-          subtext: "Promoting the notion of personalized allocation for individuals and assessing their interest",
-        },
-        // {
-        //   id: 6,
-        //   icon: IconDiamond,
-        //   title: 'Directing Aspiratiopns',
-        //   subtext: "Assisting individuals in gauging their aspirations, thereby aiding them on the path to success",
-        // },
+     
       ]
+      
     },
 
     category: {
       category_component: CategoryBanner,
       category_title: 'Discover endless stories in travel, redefine adventure, create memories',
-      title_sub: "Tourism authority vision",
-      title_sub_desc: "The tourism sector is considered one of the key pillars in achieving the Kingdom's Vision 2030, encompassing all its branches. The authority aims to support the growth of the travel and tourism sector by meeting the needs of tourism companies and other business partners",
+      title_sub: "Tourism Authority Exhibition",
+      title_sub_desc: "The “Electronic Exhibition for Ministry of Tourism Specializations” is an interactive platform offering information on tourism careers and guides individuals to suitable paths through interactive tools",
+      cat_bg: "https://images.unsplash.com/photo-1682685796444-acc2f5c1b7b6?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      cat_color: "white",
       category_data: [
         {
           id: 1,
           subtitle: "Tour Guide",
           title: "Historical, cultural, and natural landmarks",
           content: "A tour guide is a professional who leads individuals or groups on tours, providing information and insights about historical, cultural, and natural landmarks. They possess in-depth knowledge of the destinations they guide, creating an engaging and informative experience for tourists",
-          subContent1: "Subcontent Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
-          subContent2: "Subcontent1 Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
+          subContent1: "Tour guides play a pivotal role in the tourism industry, acting as the primary link between travelers and the cultural, historical, and natural heritage of a region. Their responsibilities extend beyond simply providing facts about various attractions; they are storytellers who bring history to life, enriching visitors’ experiences with engaging narratives and personal anecdotes.",
+          subContent2: "A tour guide’s day-to-day activities involve planning and conducting tours, whether in historical landmarks, natural parks, or urban areas. They are responsible for researching the sites they cover to deliver accurate and captivating information. Guides must also adapt their presentations to suit different audiences, which may include school groups, foreign tourists, or professionals.",
           author: '2',
           img: "https://images.unsplash.com/photo-1639763703351-c27defbb51b1?q=80&w=1621&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           contentImg: "https://images.unsplash.com/photo-1682695798256-28a674122872?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -183,8 +172,8 @@ const cooperatesData = [
           subtitle: "Chef",
           title: "Crafting Delights, Savoring Moments",
           content: "Chefs are culinary experts responsible for planning, preparing, and presenting food. They can work in various settings, including restaurants, hotels, or catering services. Chefs often specialize in specific cuisines and are skilled in creating unique and delicious dishes",
-          subContent1: "Subcontent Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
-          subContent2: "Subcontent1 Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
+          subContent1: "Chefs are the creative force behind culinary experiences in restaurants, hotels, and other food service establishments. Their artistry transforms raw ingredients into delightful dishes that not only please the palate but also create memorable dining experiences. The role of a chef encompasses a broad range of responsibilities, from menu creation to staff management.",
+          subContent2: "A chef’s primary responsibility is to develop and execute menus that reflect their culinary vision and meet the expectations of their clientele. This involves researching food trends, experimenting with flavors, and considering dietary restrictions. Chefs also oversee the preparation and presentation of food, ensuring consistency in quality and taste.",
           author: '2',
           img: "https://images.unsplash.com/photo-1428895009712-de9e58a18409?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           contentImg: "https://images.unsplash.com/photo-1488992783499-418eb1f62d08?q=80&w=1589&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -201,8 +190,8 @@ const cooperatesData = [
           subtitle: "Receptionist",
           title: "Elevating Hospitality, One Greeting at a Time",
           content: "Receptionists play a crucial role in the hospitality industry, serving as the first point of contact for guests. They handle reservations, check-ins, and provide information about facilities and services. Exceptional communication and customer service skills are vital in this role",
-          subContent1: "Subcontent Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
-          subContent2: "Subcontent1 Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
+          subContent1: "Receptionists serve as the first point of contact in various organizations, from hotels to corporate offices, and play a crucial role in shaping visitors’ first impressions. Their responsibilities encompass a wide range of administrative and customer service tasks, making them integral to the smooth operation of any business.",
+          subContent2: "A receptionist’s duties often include greeting guests, answering phone calls, managing appointment schedules, and handling correspondence. They may be responsible for maintaining the reception area, ensuring it is organized and welcoming. In hospitality settings, receptionists manage check-in and check-out processes, assist with reservations, and provide information about services and amenities.",
           author: '2',
           img: "https://images.unsplash.com/photo-1543325042-c67825847491?q=80&w=1718&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           contentImg: "https://images.unsplash.com/photo-1560662105-57f8ad6ae2d1?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -217,8 +206,8 @@ const cooperatesData = [
           subtitle: "Archaeological Restorer",
           title: "Reviving History, Preserving Legacy",
           content: "Archaeological restorers specialize in preserving and restoring artifacts and structures of historical significance. They use their expertise in materials, techniques, and historical context to ensure the conservation of cultural heritage for future generations",
-          subContent1: "Subcontent Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
-          subContent2: "Subcontent1 Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
+          subContent1: "Archaeological restorers are specialized professionals dedicated to preserving and restoring artifacts and structures uncovered during archaeological excavations. Their work is critical in ensuring that historical objects are maintained in a manner that respects their integrity and context, allowing future generations to study and appreciate them.",
+          subContent2: "The primary responsibility of an archaeological restorer is to assess the condition of artifacts, determining what restoration techniques are appropriate. This process may involve cleaning, repairing, and stabilizing objects while documenting the restoration work meticulously. Restorers must balance scientific methods with artistic skill to ensure that repairs are not only functional but also aesthetically appropriate.",
           author: '2',
           img: "https://images.unsplash.com/photo-1628074958552-7c9d0b4173b7?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           contentImg: "https://images.unsplash.com/photo-1540567477540-322b76aadbc6?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -234,8 +223,8 @@ const cooperatesData = [
           subtitle: "Accommodation Manager",
           title: "Beyond Comfort, Creating Memorable Stays",
           content: "Accommodation managers oversee the operation of lodging establishments such as hotels, resorts, or bed and breakfasts. They manage staff, coordinate guest services, and ensure the smooth running of the accommodation to provide a positive experience for guests",
-          subContent1: "Subcontent Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
-          subContent2: "Subcontent1 Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
+          subContent1: "Accommodation managers oversee the daily operations of hotels, hostels, and other lodging facilities, ensuring that guests have a positive and comfortable experience. Their role is multifaceted, involving management, customer service, and financial oversight.",
+          subContent2: "The primary duties of an accommodation manager include supervising staff, managing budgets, and ensuring compliance with health and safety regulations. They develop and implement policies to improve service quality and guest satisfaction while handling reservations and inquiries.",
           author: '2',
           img: "https://images.unsplash.com/photo-1554774853-b415df9eeb92?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           contentImg: "https://plus.unsplash.com/premium_photo-1676320103087-4aec0a09088f?q=80&w=1828&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -251,8 +240,8 @@ const cooperatesData = [
           subtitle: "Tourism Events Organizer",
           title: "Crafting Experiences, Igniting Joys",
           content: "Professionals in this role plan and organize events within the tourism sector, such as festivals, conferences, or exhibitions. They coordinate logistics, manage budgets, and ensure that events run smoothly, contributing to the overall appeal of a destination",
-          subContent1: "Subcontent Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
-          subContent2: "Subcontent1 Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
+          subContent1: "Tourism events organizers are responsible for planning and executing events that attract visitors and promote tourism within a region. Their role involves a blend of creativity, project management, and logistical coordination to ensure that events are successful and memorable.",
+          subContent2: "A tourism events organizer’s tasks include conceptualizing event themes, managing budgets, securing venues, and coordinating with vendors and sponsors. They are responsible for marketing the events to attract participants and managing logistics such as permits, transportation, and accommodations.",
           author: '2',
           img: "https://plus.unsplash.com/premium_photo-1682126157704-beacbab4906f?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           contentImg: "https://images.unsplash.com/photo-1506784242126-2a0b0b89c56a?q=80&w=1736&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -268,8 +257,8 @@ const cooperatesData = [
           subtitle: "Historical Expert",
           title: "Unveiling Stories, Nurturing Legacy",
           content: "Historical experts specialize in the study and interpretation of historical events, artifacts, and sites. They provide valuable insights into the historical context of destinations, contributing to the educational and cultural experiences of tourists",
-          subContent1: "Subcontent Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
-          subContent2: "Subcontent1 Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
+          subContent1: "Historical experts are professionals dedicated to studying, analyzing, and interpreting historical events, cultures, and societies. Their work is essential for understanding the past and its implications for the present and future.",
+          subContent2: "Historical experts conduct extensive research using primary and secondary sources, such as documents, artifacts, and oral histories. They may specialize in specific periods, regions, or themes, providing insights through publications, lectures, and presentations. Their expertise is often sought by museums, educational institutions, and media outlets.",
           author: '2',
           img: "https://images.unsplash.com/photo-1638199644296-1e7ae90e8339?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           contentImg: "https://images.unsplash.com/photo-1682687220591-cfd91ab5c1b5?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -285,8 +274,8 @@ const cooperatesData = [
           subtitle: "Hospitality Assistant",
           title: "Enhancing Hospitality, Crafting Smiles",
           content: "Hospitality assistants provide support in various areas within the hospitality industry, including housekeeping, food service, or customer service. They play a vital role in ensuring the comfort and satisfaction of guests by assisting with day-to-day operations",
-          subContent1: "Subcontent Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
-          subContent2: "Subcontent1 Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
+          subContent1: "Hospitality assistants support the operations of hotels, restaurants, and other service-oriented establishments, ensuring guests have a pleasant and seamless experience. Their role is dynamic and can involve various tasks depending on the needs of the business.",
+          subContent2: "The primary responsibilities of hospitality assistants include assisting with front desk operations, managing reservations, and providing customer service. In hotels, they may help with check-ins and check-outs, answer guest inquiries, and coordinate services. In restaurants, they might assist with food and beverage service, ensuring that guests receive timely and courteous service",
           author: '2',
           img: "https://images.unsplash.com/photo-1573497619951-6c9477fb83b4?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           contentImg: "https://images.unsplash.com/photo-1573496545669-abf57046fcd6?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -531,6 +520,14 @@ const cooperatesData = [
       ],
     },
 
+    definition: {
+      def_title: 'AI-Powered Algorithms',
+      def_title2: 'Evaluating Personal, and Career Suitability',
+      def_cta: "Our specialized algorithms analyze data using artificial intelligence to extract valuable insights about academic, personal, and behavioral capabilities, as well as an individual’s suitability for jobs, positions, and careers",
+      def_img: 'https://images.unsplash.com/photo-1533106958148-daaeab8b83fe?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    },
+    
+
     features: {
       
       feature_title: "Midar Milestones",
@@ -554,61 +551,43 @@ const cooperatesData = [
           logo: "",
         },
       ],
+
       features_data: [
-        { 
+          { 
           id: 1,
           icon: IconWand,
-          title: 'Talent Potentials',
-          subtext: "Unveiling the latent potential of individuals across diverse professional domains",
+          title: 'Empowering National Talents',
+          subtext: "Achieving alignment between national competencies and the needs of the artistic job market",
         },
         {
           id: 2,
           icon: IconShieldLock,
-          title: 'Success Probability',
-          subtext: "Furnishing relative reports assessing the probability of success within specific professional realms",
+          title: 'Assessing Theater Talents',
+          subtext: "Ensuring the presence of general theatrical talent in candidates and connecting them with relevant entities",
+        },
+        {
+          id: 4,
+          icon: IconArchive,
+          title: 'Discovering Innate Abilities',
+          subtext: "Exploring the innate talents and capabilities of applicants in the field of theater",
+        },
+        {
+          id: 5,
+          icon: IconArchive,
+          title: 'Providing Job Information',
+          subtext: "Offering comprehensive information about job opportunities in theater sectors and measuring capability in each specialization",
         },
         {
           id: 3,
           icon: IconArchive,
-          title: 'Employment Quality',
-          subtext: "Enhancing employability and elevating the quality of employment outcomes through Streamlining the connection process between entities",
+          title: 'Increasing Return on Investment',
+          subtext: "Achieving higher returns on investment by leveraging suitable competencies in training and employment",
         },
-        {
-          id: 4,
-          icon: IconAdjustments,
-          title: 'Fostering Creativity',
-          subtext: 'Fostering impactful creativity by strategically directing energy in professional arenas',
-        },
-        {
-          id: 5,
-          icon: IconTag,
-          title: 'Localized Analysis',
-          subtext: "Implementing a discerning selection process grounded in localized Saudi analytical attributes",
-        },
-        {
-          id: 7,
-          icon: IconCalendar,
-          title: 'Financial Optimiztion',
-          subtext: "Optimizing financial expenditures through judicious investments in apt talents",
-        },
-        {
-          id: 8,
-          icon: IconMessages,
-          title: 'Strategic Approaches',
-          subtext: "Formulating well-suited future strategies aligned with the ever-evolving job market",
-        },
-
-        // {
-        //   id: 9,
-        //   icon: IconDiamond,
-        //   title: 'personalized Allocation',
-        //   subtext: "Promoting the notion of personalized allocation for individuals and assessing their interest",
-        // },
         {
           id: 6,
-          icon: IconDiamond,
-          title: 'Directing Aspiratiopns',
-          subtext: "Assisting individuals in gauging their aspirations, thereby aiding them on the path to success",
+          icon: IconArchive,
+          title: 'Building a Strategic Inventory',
+          subtext: "Creating a strategic inventory of theatrical talents across all cities in Saudi Arabia",
         },
       ]
     },
@@ -624,8 +603,8 @@ const cooperatesData = [
           subtitle: "Playwright",
           title: "The playwright is the architect of the theatrical experience",
           content: "The playwright is the architect of the theatrical experience. They craft the script, developing the narrative, characters, and dialogue. Playwrights often explore themes, convey emotions, and create compelling stories that will be brought to life on stage",
-          subContent1: "Subcontent Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
-          subContent2: "Subcontent1 Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
+          subContent1: "",
+          subContent2: "",
           author: '2',
           img: "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           contentImg: "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -640,8 +619,8 @@ const cooperatesData = [
             subtitle: "Director",
             title: "The director is like the conductor of an orchestra",
             content: "The director is like the conductor of an orchestra, overseeing the entire production. They interpret the script, make creative decisions, guide actors in their performances, and collaborate with other creatives to bring a cohesive vision to the stage",
-            subContent1: "Subcontent Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
-            subContent2: "Subcontent1 Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
+            subContent1: "",
+            subContent2: "",
             author: '2',
             img: "https://images.unsplash.com/photo-1600353771864-06224b16e1a3?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             contentImg: "https://images.unsplash.com/photo-1600353771864-06224b16e1a3?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -657,8 +636,8 @@ const cooperatesData = [
             subtitle: "Theatrical Lighting Engineer",
             title: "Lighting engineers design and execute the lighting plan for a production",
             content: "Lighting engineers design and execute the lighting plan for a production. They use various lighting instruments, colors, and intensities to create ambiance, highlight actors, and evoke emotions. Lighting engineers play a crucial role in enhancing the visual elements of a performance",
-            subContent1: "Subcontent Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
-            subContent2: "Subcontent1 Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
+            subContent1: "",
+            subContent2: "",
             author: '2',
             img: "https://images.unsplash.com/photo-1581090581711-6c7643ef8c05?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             contentImg: "https://images.unsplash.com/photo-1581090581711-6c7643ef8c05?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -689,8 +668,8 @@ const cooperatesData = [
             subtitle: "Actor",
             title: "Actors are the heart of a production",
             content: "Actors are the heart of a production. They interpret characters, memorize lines, and convey emotions to engage the audience. Through their performances, actors bring the playwright's vision to life and contribute significantly to the overall impact of a play",
-            subContent1: "Subcontent Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
-            subContent2: "Subcontent1 Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
+            subContent1: "",
+            subContent2: "",
             author: '2',
             img: "https://images.unsplash.com/photo-1503095396549-807759245b35?q=80&w=3271&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             contentImg: "https://images.unsplash.com/photo-1503095396549-807759245b35?q=80&w=3271&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -706,8 +685,8 @@ const cooperatesData = [
             subtitle: "Theatrical Makeup Artist",
             title: "Makeup artists use cosmetics and prosthetics to transform actors into characters",
             content: "Makeup artists use cosmetics and prosthetics to transform actors into characters. They consider the time period, setting, and character traits to create visually convincing makeup that complements the overall design of the production",
-            subContent1: "Subcontent Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
-            subContent2: "Subcontent1 Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
+            subContent1: "",
+            subContent2: "",
             author: '2',
             contentImg: "https://images.unsplash.com/photo-1613966802194-d46a163af70d?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             img: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -740,8 +719,8 @@ const cooperatesData = [
             subtitle: "Theatrical Movement Designer",
             title: "Movement designers choreograph physical movements to enhance storytelling",
             content: "Movement designers choreograph physical movements to enhance storytelling. This may include dance sequences, fight choreography, or stylized movements that contribute to the overall artistic expression of the performance",
-            subContent1: "Subcontent Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
-            subContent2: "Subcontent1 Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
+            subContent1: "",
+            subContent2: "",
             author: '2',
             img: "https://images.unsplash.com/photo-1533106958148-daaeab8b83fe?q=80&w=3271&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             contentImg: "https://images.unsplash.com/photo-1511715282680-fbf93a50e721?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -757,8 +736,8 @@ const cooperatesData = [
             subtitle: "Performing Arts",
             title: "Live performances where artists showcase their talents",
             content: "Performing arts encompass a broad range of disciplines, including theater, dance, music, and more. It's an umbrella term for live performances where artists showcase their talents, providing audiences with unique and engaging experiences",
-            subContent1: "Subcontent Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
-            subContent2: "Subcontent1 Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
+            subContent1: "",
+            subContent2: "",
             author: '2',
             img: "https://images.unsplash.com/photo-1585699324551-f6c309eedeca?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             contentImg: "https://images.unsplash.com/photo-1525926477800-7a3b10316ac6?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -774,8 +753,8 @@ const cooperatesData = [
             subtitle: "Sound Engineer",
             title: "The audio elements of a production management",
             content: "Sound engineers design and manage the audio elements of a production. They ensure that dialogue, music, and sound effects are clear and appropriately balanced. Sound engineers play a crucial role in creating an immersive auditory experience for the audience",
-            subContent1: "Subcontent Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
-            subContent2: "Subcontent1 Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
+            subContent1: "",
+            subContent2: "",
             author: '2',
             img: "https://images.unsplash.com/photo-1551712744-1963ba88d303?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             contentImg: "https://images.unsplash.com/photo-1541592553160-82008b127ccb?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -791,8 +770,8 @@ const cooperatesData = [
             subtitle: "Theatrical Music Composer",
             title: "Composers create original musical scores",
             content: "Composers create original musical scores or adapt existing music to complement the production. Their compositions enhance the emotional impact of scenes, contribute to the atmosphere, and add depth to the overall auditory experience",
-            subContent1: "Subcontent Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
-            subContent2: "Subcontent1 Lorem ipsum is simply dummy text printing typesetting industry lorem ipsum been dummy...",
+            subContent1: "",
+            subContent2: "",
             author: '2',
             img: "https://images.unsplash.com/photo-1513883049090-d0b7439799bf?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             contentImg: "https://images.unsplash.com/photo-1612011956646-413fa100924c?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -1037,6 +1016,14 @@ const cooperatesData = [
       ],
     },
 
+    definition: {
+      def_title: 'AI-Powered Algorithms',
+      def_title2: 'Evaluating Personal, and Career Suitability',
+      def_cta: "Our specialized algorithms analyze data using artificial intelligence to extract valuable insights about academic, personal, and behavioral capabilities, as well as an individual’s suitability for jobs, positions, and careers",
+      def_img: 'https://images.unsplash.com/photo-1511989130945-c2b632959395?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    },
+
+    // https://images.unsplash.com/photo-1559781564-b5a5ba6a495f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
     features: {
       feature_title: "Nislan Milestones",
       feature_sub: "Nislan's Ambitious Aspirations Reflected in the Project Features",

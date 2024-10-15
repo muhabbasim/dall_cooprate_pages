@@ -62,12 +62,12 @@ const Navigations = ({ toggleBar }: Props) => {
              
             </Box>
             <div className='w-full flex justify-center items-center gap-4'>
-                <div>
+                <a target="_blank" href="https://dall-in.com/auth/login">
                     <LuUser2  
                         style={{ color: 'white' }}
                         className={cn(`w-5 h-5 font-medium cursor-pointer ${toggleBar && 'text-black'}`, !toggleBar && isCat && 'text-black')}
                     />
-                </div>
+                </a>
                 <Language toggleBar={toggleBar}/>
             
             </div>

@@ -47,6 +47,7 @@ const Language = ({toggleBar} : Props) => {
     }
     
     localStorage.setItem('language', JSON.stringify(value))
+    window.location.reload()
   }
 
   useEffect(() => {
