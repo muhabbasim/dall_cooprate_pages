@@ -4,7 +4,6 @@ import { fadeIn } from '../animation/GlobalAnimations';
 import './_iconwithtext.scss'
 import "../Accordion/_accordion.scss"
 
-import IconWithText2 from './IconWithText2';
 // import backgroundImg from 'src/assets/backgrounds/home-marketing-agency-bg-img-05.webp'
 // import { Parallax } from 'react-parallax';
 // import Translatable from '../translatable_text/Translatable';
