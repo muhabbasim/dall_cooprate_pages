@@ -90,7 +90,7 @@ const PostPage = () => {
                         <li>
                           <div className="p-[5px] relative">
                             <div className="absolute inset-0 py-4 m-auto bg-gradient-to-r from-indigo-500 to-purple-500 rounded-sm" />
-                              <a href={`http://localhost:5174/auth/ministry-individual-register/${pageId}/${jobId}`} target='_blank' className="category_btn px-8 py-[10px] rounded-sm relative group transition duration-200 text-white hover:bg-transparent">
+                              <a href={`https://dall-in.com/auth/ministry-individual-register/${pageId}/${jobId}`} target='_blank' className="category_btn px-8 py-[10px] rounded-sm relative group transition duration-200 text-white hover:bg-transparent">
                                 <Translatable>
                                   Apptitude Scale
                                 </Translatable>
