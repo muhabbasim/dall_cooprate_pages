@@ -38,8 +38,9 @@ export default defineConfig({
             ],
         },
     },
-
-
+    build: {
+        sourcemap: false
+    },
     
     // plugins: [react(),svgr({
     //   exportAsDefault: true
