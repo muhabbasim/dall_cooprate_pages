@@ -7,6 +7,7 @@ interface StateType {
   activeTheme?: string; // BLUE_THEME, GREEN_THEME, BLACK_THEME, PURPLE_THEME, ORANGE_THEME
   isLanguage?: string;
   isCardShadow?: boolean;
+  borderRadius?: number | any;
 
 }
 
