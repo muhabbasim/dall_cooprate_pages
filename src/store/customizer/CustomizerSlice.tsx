@@ -6,6 +6,8 @@ interface StateType {
   activeMode?: string; // This can be light or dark
   activeTheme?: string; // BLUE_THEME, GREEN_THEME, BLACK_THEME, PURPLE_THEME, ORANGE_THEME
   isLanguage?: string;
+  isCardShadow?: boolean;
+
 }
 
 
