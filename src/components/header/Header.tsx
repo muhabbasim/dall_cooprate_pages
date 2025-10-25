@@ -86,7 +86,7 @@ const LpHeader = (props: any) => {
           ) : null}
           {lgUp ? (
             <Stack spacing={1} direction="row" alignItems="center">
-              <Navigations toggleBar={toggleBar}/>
+              <Navigations data={props}  toggleBar={toggleBar}/>
             </Stack>
           ) : null}
 

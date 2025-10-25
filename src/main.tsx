@@ -9,13 +9,19 @@ import Spinner from './components/spinner/Spinner';
 import './utils/i18n';
 import './_mockApis';
 import './index.css'
+import { AuthContextProvider } from './context/authContext';
+import ReactQueryProvider from './utils/ReactQeuryProvider';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <Provider store={store}>
-    <Suspense fallback={<Spinner />}>
-        <BrowserRouter>
+  <BrowserRouter>
+    <Provider store={store}>
+      <Suspense fallback={<Spinner />}>
+        <AuthContextProvider>
+      <ReactQueryProvider>
           <App />
-        </BrowserRouter>
-    </Suspense>
-  </Provider>,
+      </ReactQueryProvider>
+        </AuthContextProvider>
+      </Suspense>
+    </Provider>,
+  </BrowserRouter>
 )

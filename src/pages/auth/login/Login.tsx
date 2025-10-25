@@ -1,53 +1,57 @@
+import Translatable from 'src/components/translatable_text/Translatable'
+import './login.css'
+import { LoginForm } from 'src/components/login-form'
+import { Link, useParams } from 'react-router-dom'
+import cooperatesData from 'src/data/CooporateData'
 
-import { Grid, Box, Card } from '@mui/material';
-import PageContainer from 'src/components/container/PageContainer';
-import AuthLogin from '../_components/AuthLogin';
+export default function Login() {
 
-import auth_cat1 from '../../../assets/auth_bg/auth_cat1.jpg'
+  const pageId = useParams()?.id
+  const currenLand = cooperatesData.find((item) => item.name === pageId)
 
-
-const Login2 = () => {
-  
   return (
-    <PageContainer title="ACC Login" description="this is Login page">
-      <Box
-        style={{ backgroundImage: `url(${auth_cat1})`, objectFit: 'contain', backgroundPosition: 'center', width: '100%', height: '100%', borderRadius: '0'}}
-        sx={{
-          position: 'relative',
-          '&:before': {
-            content: '""',
-            background: 'linear-gradient(60deg, #29323c 0%, #485563 100%)',
-            backgroundSize: '400% 400%',
-            animation: 'gradient 15s ease infinite',
-            position: 'absolute',
-            height: '100%',
-            width: '100%',
-            opacity: '0.3',
-          },
-        }}
-      >
-        <Grid container spacing={0} justifyContent="center" sx={{ height: '100vh' }}>
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            lg={12}
-            xl={12}
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Card elevation={9} sx={{ p: 4, zIndex: 1, width: '100%', maxWidth: '500px' }}>
-              <Box display="flex" alignItems="center" justifyContent="center">
-                {/* <Logo /> */}
-              </Box>
-              <AuthLogin/>
-            </Card>
-          </Grid>
-        </Grid>
-      </Box>
-    </PageContainer>
-  );
-};
+    <div className="grid min-h-svh lg:grid-cols-2">
+      <div className="flex flex-col gap-4 p-6 md:p-10">
+        <div className="w-full flex justify-between items-center gap-2 md:justify-startx">
+          <div>
+            <Link to="/performing_art" className="flex items-center gap-2 font-medium">
+              <div className="flex h-8 w-8 items-center justify-center rounded-md bg-gray-100 text-primary-foreground">
+                <img 
+                  loading='lazy'
+                  src={currenLand?.logo}
+                  alt="logo image" 
+                  className='cursor-pointer opacity-90 hover:opacity-100 transition-all ' 
+                />
+              </div>
+              <Translatable>
+              {(currenLand?.logo_name_en)?.toUpperCase()}
+              </Translatable>.
+            </Link>
+          </div>
 
-export default Login2;
+          {/* <LanguageAction/> */}
+        </div>
+        <div className="flex flex-1 items-center justify-center">
+          <LoginForm withDesc/>
+        </div>
+      </div>
+      <div className="relative hidden bg-muted lg:block">
+        <div className='login_img_container h-full'>
+          <div className='flex h-full flex-col justify-between gap-10 py-20 px-10'>
+            <h1 className='text-3xl text-white font-bold'>
+              <Translatable>
+                Welcom to 
+              </Translatable>
+              {" "}{(currenLand?.logo_name_en)?.toUpperCase()}
+            </h1>
+            <p className='text-white text-xl min-w-[400px]'>
+              <Translatable>
+                We measurement of capabilities is the foundation of success!
+              </Translatable>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}

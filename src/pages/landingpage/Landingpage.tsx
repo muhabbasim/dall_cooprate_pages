@@ -11,9 +11,9 @@ import { useLocation, useNavigate } from 'react-router';
 import cooperatesData from 'src/data/CooporateData';
 
 import BannerSlide from 'src/components/banner_slide/BannerSlide';
-import CategoryBanner from 'src/components/major_banner/CategoryBanner';
 import Banner_center from 'src/components/banner_center/Banner_center';
 import Definition from 'src/components/definition/Definition';
+import CategoryBanner from 'src/components/major_banner/CategoryBanner';
 // import BannerFixed from 'src/components/banner_fixed/BannerFixed';
 // import MasterCategory from 'src/components/master_category/MasterCategory';
 // import SimpleCategory from 'src/components/simple_category/SimpleCategory';

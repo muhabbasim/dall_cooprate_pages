@@ -11,11 +11,24 @@ import { DataProps } from "src/data/DataProps";
 import Translatable from "../translatable_text/Translatable";
 import { useSelector } from "src/store/Store";
 import { cn } from "src/lib/utils";
+import { useQuery } from "@tanstack/react-query";
+import api from "src/context/apiRequest";
 
 
 export default function CategoryBanner( props: DataProps ) {
   const costomizet = useSelector((state) => state.customizer.activeDir)
   const rtl = costomizet == 'rtl'
+
+  const { data: jobData } = useQuery({
+    queryKey: ['jobs-data'],
+    queryFn: async () => 
+      await api().get(`/get/sector-jobs`).then((res) => {
+      return res.data;
+    })
+  })
+
+  console.log(jobData)
+
 
   return (
     <section 
@@ -55,7 +68,7 @@ export default function CategoryBanner( props: DataProps ) {
         </motion.div>
         <Row className={cn(rtl ? 'md:-ml-[30vw]' : 'md:-mr-[30vw]')}>
           <motion.div {...fadeIn} className="col w-full mt-32 md:mt-24 home-startup-interactivebanner">
-            <InteractiveBanners bannerData={props}/>
+            <InteractiveBanners bannerData={jobData}/>
           </motion.div>
         </Row>
       </Container>

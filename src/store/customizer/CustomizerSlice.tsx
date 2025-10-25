@@ -1,27 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { getDirectionFromLanguage, getLanguageFromStorage } from 'src/utils/languageUtils';
 
 interface StateType {
   activeDir?: string | any;
   activeMode?: string; // This can be light or dark
   activeTheme?: string; // BLUE_THEME, GREEN_THEME, BLACK_THEME, PURPLE_THEME, ORANGE_THEME
-  SidebarWidth?: number;
-  MiniSidebarWidth?: number;
-  TopbarHeight?: number;
-  isCollapse?: boolean;
-  isLayout?: string;
-  isSidebarHover?: boolean;
-  isMobileSidebar?: boolean;
-  isHorizontal?: boolean;
   isLanguage?: string;
-  isCardShadow?: boolean;
-  borderRadius?: number | any;
 }
 
-const localStorageLang = localStorage.getItem('language');
-const currentLang = localStorageLang ? JSON.parse(localStorageLang) : null;
+
+const currentLang = getLanguageFromStorage();
+const currentDir = getDirectionFromLanguage(currentLang);
 
 const initialState: StateType = {
-  activeDir: 'ltr',
+  activeDir: currentDir,
   activeMode: 'light',
   activeTheme: 'BLUE_THEME',
   isLanguage: currentLang,
@@ -43,6 +35,7 @@ export const CustomizerSlice = createSlice({
     },
     setLanguage: (state: StateType, action) => {
       state.isLanguage = action.payload;
+      state.activeDir = getDirectionFromLanguage(action.payload)
     },
    
   },

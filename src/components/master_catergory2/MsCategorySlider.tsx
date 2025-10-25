@@ -6,11 +6,11 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import PropTypes from "prop-types";
 import { Link } from 'react-router-dom'
-import cooperatesData from 'src/data/CooporateData';
 import { DataProps } from 'src/data/DataProps';
 import { HiArrowLongRight } from "react-icons/hi2";
 import { cn } from 'src/lib/utils';
 import { useSelector } from 'src/store/Store';
+import cooperatesData from 'src/data/CooporateData';
 
 
 const MsCategorySlider = (props: any) => {

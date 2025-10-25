@@ -1,15 +1,18 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Box } from '@mui/material';
 import Language from 'src/components/language/Language';
 import { cn } from 'src/lib/utils';
 import { useLocation } from 'react-router';
-import { LuUser2 } from "react-icons/lu";
 import Translatable from '../translatable_text/Translatable';
+// import { AuthContext } from 'src/context/authContext';
+import { DataProps } from 'src/data/DataProps';
 
 type Props = {
     toggleBar: boolean;
+    data: DataProps;
+
 }
 
 type ItemProps = {
@@ -39,6 +42,8 @@ const navbar_routes = [
 
 const Navigations = ({ toggleBar }: Props) => {
 
+    // const {currentUser} = useContext(AuthContext)
+
     const location = useLocation();
     const pathName = location.pathname
     const isCat = pathName.includes('category')
@@ -62,12 +67,20 @@ const Navigations = ({ toggleBar }: Props) => {
              
             </Box>
             <div className='w-full flex justify-center items-center gap-4'>
-                <a target="_blank" href="https://dall-in.com/auth/login">
-                    <LuUser2  
-                        style={{ color: 'white' }}
-                        className={cn(`w-5 h-5 font-medium cursor-pointer ${toggleBar && 'text-black'}`, !toggleBar && isCat && 'text-black')}
-                    />
-                </a>
+
+                {/* {currentUser ? (
+                    <a target="_blank" href={"ministry-individual-register"} className='flex gap-2'>
+                        <LuUser2  
+                            style={{ color: 'white' }}
+                            className={cn(`w-5 h-5 font-medium cursor-pointer ${toggleBar && 'text-black'}`, !toggleBar && isCat && 'text-black')}
+                        />
+                        <p className='text-blue-800'>
+                            {(currentUser?.first_name)?.toUpperCase()} {(currentUser?.second_name)?.toUpperCase()}
+                        </p>
+                    </a> 
+                ) : (
+                    <Link to={`/auth/login/${data?.name}`} className=' text-white'>Login</Link>
+                )} */}
                 <Language toggleBar={toggleBar}/>
             
             </div>

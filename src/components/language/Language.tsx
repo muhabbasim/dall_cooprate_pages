@@ -1,21 +1,18 @@
 import React from 'react'
 import { Avatar, IconButton, Menu, MenuItem, Typography, Stack } from '@mui/material';
-import { useTranslation } from 'react-i18next';
-import { useEffect } from 'react';
 import { Languages } from 'src/data/LanguageData';
-import { AppState, useDispatch, useSelector } from 'src/store/Store';
-import { setDir, setLanguage } from 'src/store/customizer/CustomizerSlice';
+import { AppState, useSelector } from 'src/store/Store';
 import { RxGlobe } from "react-icons/rx";
 import { cn } from 'src/lib/utils';
 import { useLocation } from 'react-router';
+import useLanguageChange from 'src/utils/useLanguageChange';
 
 type Props = {
   toggleBar: boolean;
 }
 const Language = ({toggleBar} : Props) => {
   
-  const dispatch = useDispatch();
-  const { i18n } = useTranslation();
+  const langChange = useLanguageChange()
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -38,22 +35,8 @@ const Language = ({toggleBar} : Props) => {
   };
 
   const handleChageLanguage = ( value:string ) => {
-
-    dispatch(setLanguage(value))  
-    if ( value === 'ar' ) {
-      dispatch(setDir('rtl'))
-    } else if ( value === 'en' ) {
-      dispatch(setDir('ltr'))
-    }
-    
-    localStorage.setItem('language', JSON.stringify(value))
-    window.location.reload()
+    langChange(value)
   }
-
-  useEffect(() => {
-    i18n.changeLanguage(customizer.isLanguage);
-    
-  }, [currentLang]);
 
   return (
     <>

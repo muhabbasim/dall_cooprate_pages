@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 // styles
 import './_blockquote.scss'
@@ -9,7 +8,7 @@ import './buttonStyle.css'
 // Libraries
 import { Col, Row } from 'react-bootstrap'
 import { Container } from '@mui/material'
-import { Link, useLocation, useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 
 
 // Data
@@ -21,36 +20,38 @@ import FolderOpenOutlinedIcon from '@mui/icons-material/FolderOpenOutlined';
 import { fadeInUp } from 'src/components/animation/GlobalAnimations'
 // import backgroundImg from 'src/assets/backgrounds/home-decor-bg-img-02.webp'
 import backgroundImg2 from 'src/assets/backgrounds/home-freelancer-img-06.webp'
-import cooperatesData from 'src/data/CooporateData'
-import { DataProps } from 'src/data/DataProps'
 import Translatable from 'src/components/translatable_text/Translatable'
 import { useSelector } from 'src/store/Store'
 import { useTranslation } from 'react-i18next'
+import cooperatesData from 'src/data/CooporateData'
+import { useQuery } from '@tanstack/react-query'
+import api from 'src/context/apiRequest'
 
 
 const PostPage = () => {
-  const [data, setData] = useState<any>()
-  const [categries, setCategries] = useState<any>()
   const { t } = useTranslation();
   const location = useLocation()
   const cooperationTitle = location.pathname.split('/')[1]
+  const currntLand = cooperatesData.find((land) => land.name === cooperationTitle)
+  const pageId = currntLand?.name === 'performing_art' ? 'hajj-ministry' : currntLand?.name
   const rtl = useSelector(state => state.customizer.activeDir === 'rtl')
 
-  // fetch the query param
   const param = useParams();
-  const categoryId: any = param.id
+  const jobId: any = param.id
 
-  useEffect(() => {
-    const cooperateData = cooperatesData.find((item: DataProps) =>item.name === cooperationTitle )
-    const categoryData = cooperateData?.category?.category_data?.find((item) => item.id === parseInt(categoryId))
-    const categories = cooperateData?.category
-    setData(categoryData);
-    setCategries(categories);
-  }, [categoryId])
+  const { data: jobData } = useQuery({
+    queryKey: ['jobs-data'],
+    queryFn: async () => 
+      await api().get(`/get/sector-jobs`).then((res) => {
+      return res.data;
+    })
+  })
+  
+  const currntJob = jobData?.find((el: any) => el?.id === parseInt(jobId))
 
   return (
     <div style={{ backgroundImage: `url(${backgroundImg2})`}} className='cover-background pt-[50px]'>
-      {data ? (
+      {currntJob ? (
         <>
           <section className="py-[130px] lg:py-[90px] md:py-[75px] sm:py-[50px]">
             <Container maxWidth='lg'>
@@ -62,16 +63,18 @@ const PostPage = () => {
 
                       <ul className="flex justify-between mb-8 ">
                         <div className='flex gap-4'>
-                          {
-                            data?.date && <li className=" align-middle flex gap-2">
+                            <li className=" align-middle flex gap-2">
                               <EventNoteIcon color='primary' className="feather-calendar mr-[10px]"/>
-                              <span>{data?.date}</span>
+                              <span>13 May 2024</span>
                             </li>
-                          }
-                          <li className="align-middle flex gap-2">
+                            <li className=" align-middle flex gap-2">
+                            <FolderOpenOutlinedIcon color='primary' className="feather-folder  mr-[10px]"/>
+                              <span>Hajj Ministry</span>
+                            </li>  
+                          {/* <li className="align-middle flex gap-2">
                             <FolderOpenOutlinedIcon color='primary' className="feather-folder  mr-[10px]"/>
                             {
-                              data?.category?.map((item: any, i: any) => {
+                              jobData?.category?.map((item: any, i: any) => {
                                 return (
                                   <Link aria-label="link" key={i} to={`#`}>
                                     <Translatable>
@@ -81,15 +84,15 @@ const PostPage = () => {
                                 )
                               })
                             }
-                          </li>
+                          </li> */}
                         </div>
                           
                         <li>
                           <div className="p-[5px] relative">
                             <div className="absolute inset-0 py-4 m-auto bg-gradient-to-r from-indigo-500 to-purple-500 rounded-sm" />
-                              <a href="https://dall-in.com/auth/register" target='_blank' className="category_btn px-8 py-[10px] rounded-sm relative group transition duration-200 text-white hover:bg-transparent">
+                              <a href={`http://localhost:5174/auth/ministry-individual-register/${pageId}/${jobId}`} target='_blank' className="category_btn px-8 py-[10px] rounded-sm relative group transition duration-200 text-white hover:bg-transparent">
                                 <Translatable>
-                                  Talent Measurement
+                                  Apptitude Scale
                                 </Translatable>
                               </a>
                           </div>
@@ -97,42 +100,42 @@ const PostPage = () => {
                       </ul>
                       <span className="text-2xl font-bold ">
                           <Translatable>
-                            {data.title}
+                            {currntJob?.name}
                           </Translatable>
                       </span>
-                      <img height='200px' src={data.contentImg} alt="category image" className="w-full h-[500px] object-cover rounded-[6px] my-[3.5rem]"></img>
+                      <img height='200px' src={currntJob?.cover} alt="category image" className="w-full h-[500px] object-cover rounded-[6px] my-[3.5rem]"></img>
                       <p className="mb-[25px]">
                           <Translatable>
-                            {data.content}
+                            {currntJob?.major_name}
                           </Translatable> 
                       </p>
                       <Blockquote
                         className="my-[3.5rem] ml-24 sm:ml-0"
                         theme="blockquote-style-02"
-                        title={t(`${data?.subContent1}`)}
-                        author={t(`${data?.author}`)}
+                        title={t(`${jobData?.subContent1}`)}
+                        author={t("Ministry of Hajj")}
                       />
-                      {!rtl && data?.subContent2 ? (
-                        <Dropcaps theme="dropcaps-style04" content={data?.subContent2} />
+                      {!rtl && jobData?.description ? (
+                        <Dropcaps theme="dropcaps-style04" content={jobData?.description} />
                         ) : (
                           <p className="my-[25px]">
                             <Translatable>
-                              {data?.subContent2}
+                              {jobData?.description}
                             </Translatable>
                           </p>
                         )}
-                      {/* { data?.subContent2 && <p className="my-[25px]">
+                      { jobData?.description && <p className="my-[25px]">
                           <Translatable>
-                            {data?.subContent2}
+                            {jobData?.description}
                           </Translatable>
-                      </p>} */}
+                      </p>}
                     </Col>
                     </motion.div>
 
                   </Row>
                 </Col>
 
-                <Sidebar {...categries}/>
+                <Sidebar {...jobData}/>
               </Row>
             </Container>
           </section>
@@ -144,3 +147,4 @@ const PostPage = () => {
 }
 
 export default PostPage
+

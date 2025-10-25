@@ -1,0 +1,15 @@
+
+.login_img_container {
+  background-image: url('https://saudipedia.com/saudipedia/uploads/images/2023/08/13/61649.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.register_btn {
+  border-left: 4px solid rgb(255, 255, 255);
+}
+
+.active_register_but {
+  border-left: 4px solid rgb(27, 166, 226);
+}

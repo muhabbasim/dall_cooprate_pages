@@ -2,6 +2,7 @@
 import { lazy } from 'react';
 import Loadable from '../layouts/full/shared/loadable/Loadable';
 import HeaderLayout from 'src/layouts/blank/HeaderLayout';
+import AuthLayout from 'src/layouts/auth/AuthLayout';
 
 /* ***Layouts**** */
 const BlankLayout = Loadable(lazy(() => import('../layouts/blank/BlankLayout')));
@@ -18,19 +19,22 @@ const Router = [
     path: '/',
     element: <BlankLayout />,
     children: [
-      // Acc routes
       { path: '/', element: <Options /> },
-      { path: '/auth/login', element: <Login /> },
       { path: '/error_page', element: <NotFound/>},
       { path: '*', element: <NotFound/>},
-
+    ],
+  },
+  {
+    path: '/',
+    element: <AuthLayout />,
+    children: [
+      { path: '/auth/login/:id', element: <Login /> },
     ],
   },
   {
     path: '/',
     element: <HeaderLayout />,
     children: [
-      // Acc routes
       { path: '/:id', element: <LandingPage /> },
       { path: '/:id/category/:id', element: <Category/>},
     ],
