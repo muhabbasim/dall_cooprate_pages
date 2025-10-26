@@ -49,6 +49,8 @@ const PostPage = () => {
   
   const currentJob = jobData?.find((el: any) => el?.id === parseInt(jobId))
 
+  console.log(currentJob)
+
   return (
     <div style={{ backgroundImage: `url(${backgroundImg2})`}} className='cover-background pt-[50px]'>
       {currentJob ? (
@@ -137,7 +139,7 @@ const PostPage = () => {
                   </Row>
                 </Col>
 
-                <Sidebar {...jobData}/>
+                <Sidebar {...currentJob}/>
               </Row>
             </Container>
           </section>
