@@ -1408,7 +1408,7 @@ const cooperatesData = [
 
 
     navbar: {
-      name: 'hajj_ministry',
+      name: 'hajj-ministry',
       logo: "performing_art_logo",
       // navbar_component: <LpHeader/>,
       navbar_routes: [
