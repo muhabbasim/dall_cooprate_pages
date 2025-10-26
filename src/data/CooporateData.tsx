@@ -1399,7 +1399,7 @@ const cooperatesData = [
     }
   },
   {
-    name: 'hajj_ministry',
+    name: 'hajj-ministry',
     logo_name_en: 'Midar',
     logo_name_ar: 'ميدار',
     logo: performingArtLogo,
