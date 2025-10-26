@@ -32,23 +32,23 @@ export default function Definition({ data, options }: Props) {
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'top'
         }} 
-        className="overflow-visible p-0 relative h-[100vh]x" {...fadeIn}
+        className="overflow-visible py-[6rem] relative" {...fadeIn}
       >
         <Container>
-          <Container className='py-[80px]'>
+          <Container>
             { options && <Row className=" md:absolute md:pt-0 top-[-60px] left-[10%] right-[10%] items-center justify-center">
               <Col xs={12} sm={9} lg={12} md={12}>
                 <IconWithText sponsorship={data?.features?.sponsorship_data} grid="row-cols-1 row-cols-lg-3 row-cols-md-2 justify-center gap-y-10 z-10 relative" className="rounded-[4px] flex" theme="icon-with-text-04" />
               </Col>
             </Row>}
           </Container>
-            <Row className="xl:py-[3%] gap-10">
-                <Col xl={6} lg={6} className="flex justify-center items-center md:h-[500px] sm:h-[350px]">
-                  <motion.div {...fadeIn}>
-                    <img src={data?.definition?.def_img} alt="" />
+            <Row gx={4} gy={4} className="gap-10x">
+                <Col xl={6} lg={6}  className="flex justify-center items-center md:h-[500px] sm:h-[350px] ">
+                  <motion.div {...fadeIn} className="h-full w-full overflow-hidden rounded-xl bg-slate-600">
+                    <img src={data?.definition?.def_img} alt="image" className="h-full w-full object-cover" />
                   </motion.div>
                 </Col>
-                <Col xl={5} lg={6} className="bg-[#232323]x flex flex-col justify-center">
+                <Col xl={6} lg={6} className="bg-[#232323]x flex flex-col justify-center">
                   <motion.span {...fadeIn} className="font-serif font-medium text-[#e6994e] tracking-[2px] uppercase block mb-[35px]">
                     <Translatable>
                       {data?.definition?.def_title}

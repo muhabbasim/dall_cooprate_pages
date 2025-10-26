@@ -89,7 +89,10 @@ const LpHeader = (props: any) => {
               <Navigations data={props}  toggleBar={toggleBar}/>
             </Stack>
           ) : null}
-
+          {
+            props.hasParentLogo && 
+            <img src="https://www.haj.gov.sa/assets/images/logos/header-logo.png" alt="logo" className='w-40 mx-4'/>
+          }
         </ToolbarStyled>
       </Container>
       <Drawer

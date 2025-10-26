@@ -14,9 +14,8 @@ import BannerSlide from 'src/components/banner_slide/BannerSlide';
 import Banner_center from 'src/components/banner_center/Banner_center';
 import Definition from 'src/components/definition/Definition';
 import CategoryBanner from 'src/components/major_banner/CategoryBanner';
-// import BannerFixed from 'src/components/banner_fixed/BannerFixed';
-// import MasterCategory from 'src/components/master_category/MasterCategory';
-// import SimpleCategory from 'src/components/simple_category/SimpleCategory';
+import HajjMinistry from 'src/components/hajj_major/HajjMinistry';
+
 
 const Landingpage = () => {
   const route = useNavigate();
@@ -42,6 +41,9 @@ const Landingpage = () => {
   } else if (currenLand?.name === 'armed_forces') {
     landBanner = <Banner_center/>
     title = 'Nislan'
+  } else if (currenLand?.name === 'hajj_ministry') {
+    landBanner = <HajjMinistry {...currenLand}/>
+    title = 'hajj_ministry'
   }
 
   

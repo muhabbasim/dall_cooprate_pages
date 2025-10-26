@@ -15,6 +15,16 @@ import { useQuery } from "@tanstack/react-query";
 import api from "src/context/apiRequest";
 
 
+const selectedJobs = [
+  "Transportation specialist",
+  "Tour guide",
+  "Communication engineer",
+  "Photojournalist",
+  "Chef",
+  "Communication engineer"
+];
+
+
 export default function CategoryBanner( props: DataProps ) {
   const costomizet = useSelector((state) => state.customizer.activeDir)
   const rtl = costomizet == 'rtl'
@@ -27,8 +37,8 @@ export default function CategoryBanner( props: DataProps ) {
     })
   })
 
-  console.log(jobData)
-
+  const hajMinistryJobs = jobData?.filter((job: any) => selectedJobs?.map((el) => el?.toLowerCase())?.includes(job?.en_name))
+  const bannarData = props?.name === "hajj_ministry" ? hajMinistryJobs : props?.category?.category_data
 
   return (
     <section 
@@ -68,7 +78,7 @@ export default function CategoryBanner( props: DataProps ) {
         </motion.div>
         <Row className={cn(rtl ? 'md:-ml-[30vw]' : 'md:-mr-[30vw]')}>
           <motion.div {...fadeIn} className="col w-full mt-32 md:mt-24 home-startup-interactivebanner">
-            <InteractiveBanners bannerData={jobData}/>
+            <InteractiveBanners bannerData={bannarData}/>
           </motion.div>
         </Row>
       </Container>
