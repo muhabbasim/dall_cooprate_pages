@@ -41,9 +41,9 @@ const Landingpage = () => {
   } else if (currenLand?.name === 'armed_forces') {
     landBanner = <Banner_center/>
     title = 'Nislan'
-  } else if (currenLand?.name === 'hajj_ministry') {
+  } else if (currenLand?.name === 'hajj-ministry') {
     landBanner = <HajjMinistry {...currenLand}/>
-    title = 'hajj_ministry'
+    title = 'hajj-ministry'
   }
 
   

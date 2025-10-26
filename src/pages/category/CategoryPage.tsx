@@ -32,8 +32,8 @@ const PostPage = () => {
   const { t } = useTranslation();
   const location = useLocation()
   const cooperationTitle = location.pathname.split('/')[1]
-  const currntLand = cooperatesData.find((land) => land.name === cooperationTitle)
-  const pageId = currntLand?.name === 'performing_art' ? 'hajj-ministry' : currntLand?.name
+  const currnetLand = cooperatesData.find((land) => land.name === cooperationTitle)
+  const pageId = currnetLand?.name === 'performing_art' ? 'hajj-ministry' : currnetLand?.name
   // const rtl = useSelector(state => state.customizer.activeDir === 'rtl')
 
   const param = useParams();
@@ -49,7 +49,7 @@ const PostPage = () => {
   
   const currentJob = jobData?.find((el: any) => el?.id === parseInt(jobId))
 
-  console.log(currentJob)
+  console.log(currnetLand?.name)
 
   return (
     <div style={{ backgroundImage: `url(${backgroundImg2})`}} className='cover-background pt-[50px]'>

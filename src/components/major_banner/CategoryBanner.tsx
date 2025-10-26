@@ -26,7 +26,7 @@ const selectedJobs = [
 
 
 export default function CategoryBanner( props: DataProps ) {
-  
+
   const costomizet = useSelector((state) => state.customizer.activeDir)
   const rtl = costomizet == 'rtl'
 
@@ -39,7 +39,7 @@ export default function CategoryBanner( props: DataProps ) {
   })
 
   const hajMinistryJobs = jobData?.filter((job: any) => selectedJobs?.map((el) => el?.toLowerCase())?.includes(job?.en_name))
-  const bannarData = props?.name === "hajj_ministry" ? hajMinistryJobs : props?.category?.category_data
+  const bannarData = props?.name === "hajj-ministry" ? hajMinistryJobs : props?.category?.category_data
 
 
   return (
