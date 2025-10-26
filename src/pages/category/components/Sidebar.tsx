@@ -56,7 +56,7 @@ const Sidebar = (props: any) => {
                 <Link aria-label="tag" to="#" className='inline-block text-center text-sm mt-0 ml-[6px] mb-[10px] mr-0 pt-[5px] px-[18px] pb-[6px] rounded-[4px] border-mediumgray border hover:text-[#828282] hover:shadow-[0_0_15px_rgba(0,0,0,0.1)]'>Hotel</Link>
             </motion.div>
             <div className='mb-20 xs:mb-[35px]'>
-                <span className="mb-[35px] font-bold text-lg block" {...fadeInLeft}> <Translatable>Categories</Translatable></span>
+                <motion.span className="mb-[35px] font-bold text-lg block" {...fadeInLeft}> <Translatable>Categories</Translatable></motion.span>
                 <motion.ul className="pl-0" {...fadeInLeft}>
                     <li className='relative inline-block w-full mb-[15px] leading-[18px]'>
                         <Link aria-label="link" to="#" className='inline-block text-left'>Entertainment</Link>

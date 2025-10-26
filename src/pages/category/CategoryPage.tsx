@@ -13,7 +13,7 @@ import { useLocation, useParams } from 'react-router-dom'
 
 // Data
 import Sidebar from './components/Sidebar'
-import Dropcaps from './components/Dropcaps'
+// import Dropcaps from './components/Dropcaps'
 import Blockquote from './components/Blockquote'
 import EventNoteIcon from '@mui/icons-material/EventNote';
 import FolderOpenOutlinedIcon from '@mui/icons-material/FolderOpenOutlined';
@@ -21,7 +21,7 @@ import { fadeInUp } from 'src/components/animation/GlobalAnimations'
 // import backgroundImg from 'src/assets/backgrounds/home-decor-bg-img-02.webp'
 import backgroundImg2 from 'src/assets/backgrounds/home-freelancer-img-06.webp'
 import Translatable from 'src/components/translatable_text/Translatable'
-import { useSelector } from 'src/store/Store'
+// import { useSelector } from 'src/store/Store'
 import { useTranslation } from 'react-i18next'
 import cooperatesData from 'src/data/CooporateData'
 import { useQuery } from '@tanstack/react-query'
@@ -34,7 +34,7 @@ const PostPage = () => {
   const cooperationTitle = location.pathname.split('/')[1]
   const currntLand = cooperatesData.find((land) => land.name === cooperationTitle)
   const pageId = currntLand?.name === 'performing_art' ? 'hajj-ministry' : currntLand?.name
-  const rtl = useSelector(state => state.customizer.activeDir === 'rtl')
+  // const rtl = useSelector(state => state.customizer.activeDir === 'rtl')
 
   const param = useParams();
   const jobId: any = param.id
@@ -47,11 +47,11 @@ const PostPage = () => {
     })
   })
   
-  const currntJob = jobData?.find((el: any) => el?.id === parseInt(jobId))
+  const currentJob = jobData?.find((el: any) => el?.id === parseInt(jobId))
 
   return (
     <div style={{ backgroundImage: `url(${backgroundImg2})`}} className='cover-background pt-[50px]'>
-      {currntJob ? (
+      {currentJob ? (
         <>
           <section className="py-[130px] lg:py-[90px] md:py-[75px] sm:py-[50px]">
             <Container maxWidth='lg'>
@@ -100,35 +100,37 @@ const PostPage = () => {
                       </ul>
                       <span className="text-2xl font-bold ">
                           <Translatable>
-                            {currntJob?.name}
+                            {currentJob?.name}
                           </Translatable>
                       </span>
-                      <img height='200px' src={currntJob?.cover} alt="category image" className="w-full h-[500px] object-cover rounded-[6px] my-[3.5rem]"></img>
+                      <img height='200px' src={currentJob?.cover} alt="category image" className="w-full h-[500px] object-cover rounded-[6px] my-[3.5rem]"></img>
                       <p className="mb-[25px]">
-                          <Translatable>
-                            {currntJob?.major_name}
-                          </Translatable> 
+                        <Translatable>
+                          {currentJob?.major_name}
+                        </Translatable> 
                       </p>
                       <Blockquote
                         className="my-[3.5rem] ml-24 sm:ml-0"
                         theme="blockquote-style-02"
-                        title={t(`${jobData?.subContent1}`)}
+                        // title={t(`${currentJob?.subContent1}`)}
                         author={t("Ministry of Hajj")}
                       />
-                      {!rtl && jobData?.description ? (
-                        <Dropcaps theme="dropcaps-style04" content={jobData?.description} />
+                      
+                      {/* {!rtl && currentJob?.description ? (
+                        <Dropcaps theme="dropcaps-style04" content={currentJob?.description} />
                         ) : (
                           <p className="my-[25px]">
                             <Translatable>
-                              {jobData?.description}
+                              {currentJob?.description}
                             </Translatable>
                           </p>
-                        )}
-                      { jobData?.description && <p className="my-[25px]">
+                        )} */}
+                        <div dangerouslySetInnerHTML={{ __html: currentJob?.description}}/>
+                      {/* { currentJob?.description && <p className="my-[25px]">
                           <Translatable>
-                            {jobData?.description}
+                            {currentJob?.description}
                           </Translatable>
-                      </p>}
+                      </p>} */}
                     </Col>
                     </motion.div>
 
