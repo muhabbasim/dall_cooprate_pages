@@ -16,11 +16,15 @@ function App() {
   const theme = ThemeSettings();
   const customizer = useSelector((state: AppState) => state.customizer);
 
+
+  useEffect(() => {
+    document.body.setAttribute('lang', customizer.isLanguage ?? 'en')
+  }, [customizer.isLanguage])
+
+  
   useEffect(() => {
     i18n.changeLanguage(customizer.isLanguage);
-    
   }, [customizer.isLanguage, i18n]);
-
 
   return (
     <ThemeProvider theme={theme}>

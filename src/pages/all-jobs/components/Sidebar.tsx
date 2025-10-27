@@ -7,31 +7,14 @@ import { useSelector } from 'src/store/Store';
 import { cn } from 'src/lib/utils';
 import Translatable from 'src/components/translatable_text/Translatable';
 
-const sectorOperators = [
-    {
-        id: '1',
-        name: 'Al-haramain',
-        logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBxOuTngmpmeLYuAtC3v2_SsksMfD0farH7g&s",
-    },
-    {
-        id: '2',
-        name: 'ٌRifad',
-        logo: "https://rifad.com.sa/wp-content/uploads/2023/03/rifad2small.png"
-    },
-    {
-        id: '3',
-        name: 'Sar',
-        logo: "https://yt3.googleusercontent.com/ytc/AIdro_mExr_EkLTIJ1oQSPunXDgsmf19b3qEmmNKpy--WYS67lU=s900-c-k-c0x00ffffff-no-rj"
-    },
-]
-
-
 const Sidebar = (props: any) => {
     const rtl = useSelector(state => state.customizer.activeDir === 'rtl')
 
     return (
         <aside className="col-12 col-xl-3 offset-xl-1 col-lg-4 col-md-7 md:pl-[15px]">
-            <div className='mb-10 xs:mb-[35px]'>
+    
+       
+            <div className='mb-20 xs:mb-[35px]'>
                 <span className='mb-[35px] text-lg font-bold block'><Translatable>Discover more topics</Translatable></span>
                 <ul className='max-h-[380px] overflow-scroll'>
                     {props &&  props?.category_data?.map((item: any, i: any) => (
@@ -65,14 +48,14 @@ const Sidebar = (props: any) => {
                     ))}
                 </ul>
             </div>
-            <motion.div className='visible mb-10 md:w-[90%] sm:w-full' {...fadeInLeft}>
+            <motion.div className='visible mb-20 md:w-[90%] sm:w-full' {...fadeInLeft}>
                 <span className='mb-[35px] font-bold text-lg block'> <Translatable>Category Tags</Translatable></span>
                 <Link aria-label="tag" to="#" className='inline-block text-center text-sm mt-0 ml-[6px] mb-[10px] mr-0 pt-[5px] px-[18px] pb-[6px] rounded-[4px] border-mediumgray border hover:text-[#828282] hover:shadow-[0_0_15px_rgba(0,0,0,0.1)]'>Tourism</Link>
                 <Link aria-label="tag" to="#" className='inline-block text-center text-sm mt-0 ml-[6px] mb-[10px] mr-0 pt-[5px] px-[18px] pb-[6px] rounded-[4px] border-mediumgray border hover:text-[#828282] hover:shadow-[0_0_15px_rgba(0,0,0,0.1)]'>hospitality</Link>
                 <Link aria-label="tag" to="#" className='inline-block text-center text-sm mt-0 ml-[6px] mb-[10px] mr-0 pt-[5px] px-[18px] pb-[6px] rounded-[4px] border-mediumgray border hover:text-[#828282] hover:shadow-[0_0_15px_rgba(0,0,0,0.1)]'>Transportation</Link>
                 <Link aria-label="tag" to="#" className='inline-block text-center text-sm mt-0 ml-[6px] mb-[10px] mr-0 pt-[5px] px-[18px] pb-[6px] rounded-[4px] border-mediumgray border hover:text-[#828282] hover:shadow-[0_0_15px_rgba(0,0,0,0.1)]'>communication</Link>
             </motion.div>
-            <div className='mb-10 xs:mb-[35px]'>
+            <div className='mb-20 xs:mb-[35px]'>
                 <motion.span className="mb-[35px] font-bold text-lg block" {...fadeInLeft}> <Translatable>Sectors</Translatable></motion.span>
                 <motion.ul className="pl-0" {...fadeInLeft}>
                 {props?.sectors?.map((el: {name: string}) => {
@@ -83,21 +66,14 @@ const Sidebar = (props: any) => {
                         </li>
                     )
                 })}
-    
-                </motion.ul>
-            </div>
-            <div className='mb-20 xs:mb-[35px]'>
-                <motion.span className="mb-[35px] font-bold text-lg block" {...fadeInLeft}> <Translatable>Operators</Translatable></motion.span>
-                <motion.ul className="pl-0 flex gap-3" {...fadeInLeft}>
-                {sectorOperators?.map((el: {id: string, name: string, logo: string}) => {
-                    return (
-                        <li key={el?.name} className='w-64 h-20 relative inline-block mb-[15px] leading-[18px]'>
-                            <Link aria-label="link" to="#" className='inline-block text-left'>{el?.name}</Link>
-                            <img className='h-full w-full object-fill' src={el?.logo} alt="logo" />
-                        </li>
-                    )
-                })}
-                  
+                    {/* <li className='relative inline-block w-full mb-[15px] leading-[18px]'>
+                        <Link aria-label="link" to="#" className='inline-block text-left'>Business</Link>
+                        <span className={cn('text-[14px] absolute top-[1px] ', rtl ? "left-0 text-left ": "right-0 text-right")}>05</span>
+                    </li>
+                    <li className='relative inline-block w-full mb-[15px] leading-[18px]'>
+                        <Link aria-label="link" to="#" className='inline-block text-left'>Creative</Link>
+                        <span className={cn('text-[14px] absolute top-[1px] ', rtl ? "left-0 text-left ": "right-0 text-right")}>03</span>
+                    </li> */}
                 </motion.ul>
             </div>
 

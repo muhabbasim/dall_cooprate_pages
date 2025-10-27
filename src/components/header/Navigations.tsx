@@ -2,12 +2,13 @@
 // @ts-ignore
 import React, { useContext, useState } from 'react';
 import { Box } from '@mui/material';
-import Language from 'src/components/language/Language';
+// import Language from 'src/components/language/Language';
 import { cn } from 'src/lib/utils';
 import { useLocation } from 'react-router';
 import Translatable from '../translatable_text/Translatable';
 // import { AuthContext } from 'src/context/authContext';
 import { DataProps } from 'src/data/DataProps';
+import LanguageAction from '../language/LanguageAction';
 
 type Props = {
     toggleBar: boolean;
@@ -81,7 +82,8 @@ const Navigations = ({ toggleBar }: Props) => {
                 ) : (
                     <Link to={`/auth/login/${data?.name}`} className=' text-white'>Login</Link>
                 )} */}
-                <Language toggleBar={toggleBar}/>
+                {/* <Language toggleBar={toggleBar}/> */}
+                <LanguageAction toggleBar={toggleBar}/>
             
             </div>
         </>

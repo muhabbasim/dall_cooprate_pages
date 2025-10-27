@@ -15,6 +15,8 @@ export type DataProps = {
   logoSize: null | number,
   logo_name_en: string;
   logo_name_ar: string;
+  hero_btn?: string;
+  hero_btn_link?: string;
   hasParentLogo?: boolean;
   
   navbar: {

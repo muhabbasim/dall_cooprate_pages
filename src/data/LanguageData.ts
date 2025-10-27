@@ -1,5 +1,7 @@
 import FlagSa from '../assets/images/flag/icon-flag-sa.svg';
 import FlagEn from '../assets/images/flag/icon-flag-en.svg';
+import Earth from '../assets/images/flag/icon-earth.svg';
+
 
 
 export const LanguageData = [
@@ -18,7 +20,7 @@ export const LanguageData = [
 export const Languages = [
   {
     flagname: 'English (UK)',
-    icon: FlagEn,
+    icon: Earth,
     value: 'en',
   },
   {
@@ -27,3 +29,4 @@ export const Languages = [
     value: 'ar',
   },
 ];
+

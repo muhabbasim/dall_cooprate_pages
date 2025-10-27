@@ -1432,9 +1432,10 @@ const cooperatesData = [
     },
 
     hero: {
-      hero_title: 'Platform for Hajj and Umrah ',
+      hero_title: 'Platform for Hajj and Umrah',
       hero_title2: 'Job Guidance',
       hero_cta: 'Connecting talent with opportunities in Hajj and Umrah services — guidance, training, and career matching made simple.',
+
       hero_images: [
         { img: 'https://images.unsplash.com/photo-1633174754673-95dd2842f8fc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2531' },
         { img: 'https://images.unsplash.com/photo-1682695794816-7b9da18ed470?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
@@ -1511,9 +1512,9 @@ const cooperatesData = [
 
     category: {
       category_component: CategoryBanner,
-      category_title: 'Experience the magic of performing arts, where every stage is a canvas for masterpieces to unfold',
-      title_sub: "Performing art vision",
-      title_sub_desc: "Stimulating the development of the theater and performing arts sectors, fostering them through empowering Saudi talents to build successful careers and create content that inspires the audience",
+      category_title: 'Start Your Career in the Hajj and Umrah Sector Today',
+      title_sub: "",
+      title_sub_desc: "Sign up, discover opportunities, and take the first step towards a fulfilling career serving millions of pilgrims.",
       category_data: [
         {
           id: 1,

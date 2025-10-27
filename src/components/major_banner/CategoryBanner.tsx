@@ -21,7 +21,8 @@ const selectedJobs = [
   "Communication engineer",
   "Photojournalist",
   "Chef",
-  "Communication engineer"
+  "Communication engineer",
+  "security and safety engineer"
 ];
 
 
@@ -39,8 +40,7 @@ export default function CategoryBanner( props: DataProps ) {
   })
 
   const hajMinistryJobs = jobData?.filter((job: any) => selectedJobs?.map((el) => el?.toLowerCase())?.includes(job?.en_name))
-  const bannarData = props?.name === "hajj-ministry" ? hajMinistryJobs : props?.category?.category_data
-
+  const bannarData: any = props?.name === "hajj-ministry" ? hajMinistryJobs : props?.category?.category_data
 
   return (
     <section 
@@ -55,7 +55,7 @@ export default function CategoryBanner( props: DataProps ) {
       <Container>
         <motion.div {...fadeIn} style={{ color: props?.category?.cat_color }} className={`py-10 md:flex  gap-10 justify-between`}>
           <Col lg={6} sm={12} className=" md:mb-[40px] sm:mb[15px] xs:mb-[20px]">
-            <h2 className="heading-4 font-serif leading-[3rem] font-semibold lg:w-full">
+            <h2 className="heading-4 font-serifx leading-[3rem] font-semibold lg:w-full">
               <Translatable>
                 {props?.category?.category_title}
               </Translatable>
@@ -64,7 +64,7 @@ export default function CategoryBanner( props: DataProps ) {
           <Col lg={6} sm={12}>
             <Row sm={12} xs={1} className="gap-y-10">
               <Col className="xs:text-center">
-                <span className="font-serif text-2xl font-bold mb-[10px] block xs:mb-[5px]">
+                <span className="font-serifx text-2xl font-bold mb-[10px] block xs:mb-[5px]">
                   <Translatable>
                     {props?.category?.title_sub}
                   </Translatable>

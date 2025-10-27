@@ -20,8 +20,6 @@ const InteractiveBanners = (props: any) => {
     const customizer = useSelector(state => state.customizer.activeDir)
     const rtl = customizer === 'rtl'
 
-
-    console.log(props?.bannerData)
     return (
         <div className={`interactivebanners-style-02  md:mr-[-15px] sm:contents ${props.className}`}>
             {!rtl ? (
@@ -46,7 +44,7 @@ const InteractiveBanners = (props: any) => {
                                         {item?.cover && <img className="interactiveanners-img h-[350px] object-cover" src={item?.cover} alt="interactive banners" />}
                                     </div>
                                     <div className="fancy-text-content px-[55px] xs:px-[30px] xxs:px-[30px]">
-                                        {item?.name && <span style={{ backgroundColor: '#723030'}} className="interactivebanners-subtitle px-[15px] py-[5px] mb-[20px] rounded-[2px] text-white text-xxs font-serif uppercase leading-4 tracking-[1px] inline-block">
+                                        {item?.name && <span style={{ backgroundColor: '#723030'}} className="interactivebanners-subtitle px-[15px] py-[5px] mb-[20px] rounded-[2px] text-white text-xxs font-serifx uppercase leading-4 tracking-[1px] inline-block">
                                             <Translatable>
                                                 {item?.name}
                                             </Translatable>
@@ -104,7 +102,7 @@ const InteractiveBanners = (props: any) => {
                                     </div>}
                                     
                                     {item && 
-                                        <a href={`${pathName}/category/${item?.id}`}  className="btn rounded-[3px] mt-[15px]  font-serif uppercase md:mb-[15px]" color="#232323">
+                                        <a href={`${pathName}/category/${item?.id}`}  className="btn rounded-[3px] mt-[15px]  font-serifx uppercase md:mb-[15px]" color="#232323">
                                             <Translatable>
                                                 Read more
                                             </Translatable>
@@ -131,7 +129,7 @@ InteractiveBanners.propTypes = {
     grid: PropTypes.string,
     carousalOption: PropTypes.object,
     animation: PropTypes.object,
-    bannerData: PropTypes.object,
+    bannerData: PropTypes.any,
     data: PropTypes.arrayOf(
         PropTypes.exact({
             subtitle: PropTypes.string,

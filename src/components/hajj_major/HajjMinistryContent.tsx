@@ -8,6 +8,7 @@ import { Typography, Box, Stack, useMediaQuery, Theme } from '@mui/material';
 import { motion } from 'framer-motion';
 import { DataProps } from 'src/data/DataProps';
 import Translatable from '../translatable_text/Translatable';
+import { Link } from 'react-router-dom';
 
 
 
@@ -91,11 +92,11 @@ const HajjMinistryContent = (props: DataProps) => {
         }}
       >
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} mt={3}>
-          <a href="https://dall-in.com" target='_blank' style={{backgroundColor: `${props?.theme?.color_pallete?.btn_secondary}`}} className={`px-10 py-4 rounded-sm font-bold text-white`}>
+          <Link to="/hajj-ministry/all-jobs" style={{backgroundColor: `${props?.theme?.color_pallete?.btn_secondary}`}} className={`px-10 py-4 rounded-sm font-bold text-white`}>
             <Translatable>
               Explore Jobs
             </Translatable>
-          </a>
+          </Link>
         </Stack>
       </motion.div>
     </Box>

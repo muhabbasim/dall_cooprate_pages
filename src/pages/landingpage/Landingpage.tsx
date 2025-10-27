@@ -46,7 +46,6 @@ const Landingpage = () => {
     title = 'hajj-ministry'
   }
 
-  
   return (
     <div className='overflow-hidden'>
       { currenLand &&  (

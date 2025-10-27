@@ -12,7 +12,7 @@ import { DataProps } from "src/data/DataProps";
 // import { useSelector } from "src/store/Store";
 // import { cn } from "src/lib/utils";
 
-import Buttons from "../Button/Buttons";
+// import Buttons from "../Button/Buttons";
 import IconWithText from "../features/IconWithText/IconWithText";
 import Translatable from "../translatable_text/Translatable";
 // import { Container } from "@mui/material";
@@ -49,12 +49,12 @@ export default function Definition({ data, options }: Props) {
                   </motion.div>
                 </Col>
                 <Col xl={6} lg={6} className="bg-[#232323]x flex flex-col justify-center">
-                  <motion.span {...fadeIn} className="font-serif font-medium text-[#e6994e] tracking-[2px] uppercase block mb-[35px]">
+                  <motion.span {...fadeIn} className="font-serifx font-medium text-[#e6994e] tracking-[2px] uppercase block mb-[35px]">
                     <Translatable>
                       {data?.definition?.def_title}
                     </Translatable>
                   </motion.span>
-                  <motion.h2 {...{ ...fadeIn, transition: { delay: 0.4 } }} className="heading-4 font-serif font-semibold text-whitex -tracking-[.5px] mb-12 w-[90%] sm:w-full">
+                  <motion.h2 {...{ ...fadeIn, transition: { delay: 0.4 } }} className="heading-4 font-serifx font-semibold text-whitex -tracking-[.5px] mb-12 w-[90%] sm:w-full">
                     <Translatable>
                       {data?.definition?.def_title2}
                     </Translatable>
@@ -64,11 +64,11 @@ export default function Definition({ data, options }: Props) {
                       {data?.definition?.def_cta}
                     </Translatable>
                   </motion.p>
-                  <a target="_blank" href="https://dall-in.com/auth/login">
-                    <motion.div {...{ ...fadeIn, transition: { delay: 0.8 } }}>
-                      <Buttons className="font-medium font-serif uppercase btn-link after:h-[2px] md:text-md md:mb-[15px] after:bg-white hover:text-white tracking-[1px]" size="xl" color="#fff" title={<Translatable>Start know</Translatable>}/>
-                    </motion.div>
-                  </a>
+                  {/* <a target="_blank" href="https://dall-in.com/auth/login">
+                    <motion.a {...{ ...fadeIn, transition: { delay: 0.8 } }}>
+                      <Buttons className="font-medium font-serifx uppercase btn-link after:h-[2px] md:text-md md:mb-[15px] after:bg-white hover:text-white tracking-[1px]" size="xl" color="#fff" title={<Translatable>Start know</Translatable>}/>
+                    </motion.a>
+                  </a> */}
                 </Col>
             </Row>
         </Container>

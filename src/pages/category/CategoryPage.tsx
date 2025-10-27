@@ -26,6 +26,7 @@ import { useTranslation } from 'react-i18next'
 import cooperatesData from 'src/data/CooporateData'
 import { useQuery } from '@tanstack/react-query'
 import api from 'src/context/apiRequest'
+import Loader from 'src/components/Loader'
 
 
 const PostPage = () => {
@@ -39,7 +40,7 @@ const PostPage = () => {
   const param = useParams();
   const jobId: any = param.id
 
-  const { data: jobData } = useQuery({
+  const { data: jobData, isLoading } = useQuery({
     queryKey: ['jobs-data'],
     queryFn: async () => 
       await api().get(`/get/sector-jobs`).then((res) => {
@@ -49,11 +50,9 @@ const PostPage = () => {
   
   const currentJob = jobData?.find((el: any) => el?.id === parseInt(jobId))
 
-  console.log(currnetLand?.name)
-
   return (
-    <div style={{ backgroundImage: `url(${backgroundImg2})`}} className='cover-background pt-[50px]'>
-      {currentJob ? (
+    <div style={{ backgroundImage: `url(${backgroundImg2})`}} className='cover-background pt-[50px] min-h-[120vh]'>
+      {jobData ? (
         <>
           <section className="py-[130px] lg:py-[90px] md:py-[75px] sm:py-[50px]">
             <Container maxWidth='lg'>
@@ -145,7 +144,11 @@ const PostPage = () => {
           </section>
 
         </>
-      ) : undefined}
+      ) : isLoading && (
+        <div className='h-[100vh] flex items-center justify-center'>
+          <div className="flex gap-2 items-center justify-center"> <Loader className="h-10 w-10 text-blue-400"/> <Translatable>Loading...</Translatable> </div> 
+        </div>
+      )}
     </div>
   )
 }

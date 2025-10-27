@@ -17,14 +17,15 @@ import MobileSidebar from './MobileSidebar';
 import { IconMenu2 } from '@tabler/icons-react';
 import { cn } from 'src/lib/utils';
 import { useLocation } from 'react-router';
-
+import hajjMinistryLogo from 'src/assets/hajj-ministry-logo.png'
 
 
 const LpHeader = (props: any) => {
 
   const location = useLocation();
   const pathName = location.pathname
-  const isCat = pathName.includes('category')
+  // const isCat = pathName.includes('category')
+  const isCat = ['category', 'all-jobs'].some((str) => pathName.includes(str));
 
   const ToolbarStyled = styled(Toolbar)(() => ({
     width: '100%',
@@ -91,7 +92,7 @@ const LpHeader = (props: any) => {
           ) : null}
           {
             props.hasParentLogo && 
-            <img src="https://www.haj.gov.sa/assets/images/logos/header-logo.png" alt="logo" className='w-40 mx-4'/>
+            <img src={hajjMinistryLogo} alt="logo" className='w-40 mx-4'/>
           }
         </ToolbarStyled>
       </Container>

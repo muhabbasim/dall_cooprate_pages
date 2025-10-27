@@ -13,6 +13,7 @@ const Options = Loadable(lazy(() => import('../pages/landingpage/Options')));
 const Login = Loadable(lazy(() => import('../pages/auth/login/Login')));
 const NotFound = Loadable(lazy(() => import('../pages/error/Error')));
 const Category = Loadable(lazy(() => import('../pages/category/CategoryPage')));
+const AllJobs = Loadable(lazy(() => import('../pages/all-jobs/AllJobsPage')));
 
 const Router = [
   {
@@ -37,6 +38,7 @@ const Router = [
     children: [
       { path: '/:id', element: <LandingPage /> },
       { path: '/:id/category/:id', element: <Category/>},
+      { path: '/:id/all-jobs', element: <AllJobs/>},
     ],
   },
 ];

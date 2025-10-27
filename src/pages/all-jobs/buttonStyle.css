@@ -1,0 +1,8 @@
+.category_btn {
+  /* display: none; */
+  background-color: rgb(56, 56, 56);
+}
+.category_btn:hover {
+  /* display: none; */
+  background-color: transparent;
+}
