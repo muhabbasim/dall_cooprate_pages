@@ -38,16 +38,15 @@ const navbar_routes = [
       name: 'Categories',
       id:"FAQ"
     },
-
 ]
 
 const Navigations = ({ toggleBar }: Props) => {
 
-    // const {currentUser} = useContext(AuthContext)
-
     const location = useLocation();
     const pathName = location.pathname
-    const isCat = pathName.includes('category')
+    // const isCat = pathName.includes('category')
+    const isCat = ['category', 'all-jobs'].some((str) => pathName.includes(str));
+
     return (
         <>
             <Box className={cn(`w-full flex gap-6 text-white mx-6`, 

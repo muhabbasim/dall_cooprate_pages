@@ -15,7 +15,7 @@ import { useQuery } from "@tanstack/react-query";
 import api from "src/context/apiRequest";
 
 
-const selectedJobs = [
+export const selectedJobs = [
   "Transportation specialist",
   "Tour guide",
   "Communication engineer",
@@ -41,7 +41,7 @@ export default function CategoryBanner( props: DataProps ) {
 
   const hajMinistryJobs = jobData?.filter((job: any) => selectedJobs?.map((el) => el?.toLowerCase())?.includes(job?.en_name))
   const bannarData: any = props?.name === "hajj-ministry" ? hajMinistryJobs : props?.category?.category_data
-
+  
   return (
     <section 
       style={{ 

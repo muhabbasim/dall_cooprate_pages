@@ -18,6 +18,7 @@ import Translatable from 'src/components/translatable_text/Translatable'
 import { useQuery } from '@tanstack/react-query'
 import api from 'src/context/apiRequest'
 import JobsPageSkeleton from 'src/components/skeleton/JobsPageSkeleton'
+import { selectedJobs } from 'src/components/major_banner/CategoryBanner'
 
 
 const PostPage = () => {
@@ -29,6 +30,9 @@ const PostPage = () => {
       return res.data;
     })
   })
+
+  const hajMinistryJobs = jobData?.filter((job: any) => selectedJobs?.map((el) => el?.toLowerCase())?.includes(job?.en_name))
+
   
   return (
     <div style={{ backgroundImage: `url(${backgroundImg2})`}} className='cover-background pt-[100px] h-[100vh] px-10 pb-10'>
@@ -61,7 +65,7 @@ const PostPage = () => {
         {jobData ? (
           <>
             <motion.div className="interactivebanners-style-02 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full mt-32 md:mt-24 home-startup-interactivebanner">
-              { jobData?.map((job: any) => {
+              { hajMinistryJobs?.map((job: any) => {
                 return (
                   <div key={job?.id} className="interactivebanners-main">
                     <div className="relative overflow-hidden overlay-bg rounded-md">

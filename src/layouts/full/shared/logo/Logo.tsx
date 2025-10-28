@@ -15,9 +15,12 @@ type Props = {
 const Logo = ({ toggleBar, data }: Props) => {
 
   const location = useLocation();
-  const pathName = location.pathname.split('/')[1]
-  const category = location.pathname
+  const pathName = location.pathname.split('/')[1];
+  const category = location.pathname;
+
   const isCat = category.includes('category')
+  // const isCat = ['category', 'all-jobs'].some((str) => pathName.includes(str));
+
   
   const rtl = useSelector(state => state.customizer.activeDir === 'rtl')
   const LinkStyled = styled(Link)(() => ({
@@ -36,7 +39,7 @@ const Logo = ({ toggleBar, data }: Props) => {
       }}
     >
       <img src={data?.logo} alt="logo" 
-        className={cn(data.logoSize ? `w-${data.logoSize} ` : 'w-16', toggleBar && 'text-black')}
+        className={cn(data.logoSize ? `w-${data.logoSize}` : 'w-16', toggleBar && 'text-black')}
       />
       <h1 className={cn('text-white m-0 font-bold text-3xl uppercase', toggleBar && 'text-black', !toggleBar && isCat && 'text-black')}>
         {rtl ? data?.logo_name_ar : data?.logo_name_en}
