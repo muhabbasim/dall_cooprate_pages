@@ -102,7 +102,7 @@ const InteractiveBanners = (props: any) => {
                                     </div>}
                                     
                                     {item && 
-                                        <a href={`${pathName}/category/${item?.id}`}  className="btn rounded-[3px] mt-[15px]  font-serifx uppercase md:mb-[15px]" color="#232323">
+                                        <a href={`${pathName}/category/${item?.id}`}  className="btn rounded-[3px] mt-[15px] Rubik uppercase md:mb-[15px]" color="#232323">
                                             <Translatable>
                                                 Read more
                                             </Translatable>
