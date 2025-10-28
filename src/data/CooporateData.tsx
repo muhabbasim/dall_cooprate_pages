@@ -1447,7 +1447,7 @@ const cooperatesData = [
     definition: {
       def_title: 'AI-Powered Algorithms',
       def_title2: 'Evaluating Personal, and Career Suitability',
-      def_cta: "Our specialized algorithms analyze data using artificial intelligence to extract valuable insights about academic, personal, and behavioral capabilities, as well as an individual’s suitability for jobs, positions, and careers",
+      def_cta: "Our specialized algorithms analyze data using artificial intelligence to extract valuable insights about personal and behavioral capabilities, as well as an individual’s suitability for jobs, positions, and careers",
       def_img: 'https://images.unsplash.com/photo-1691566264354-88491ba17f15?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=929',
     },
 
