@@ -39,7 +39,8 @@ const HajjMinistryContent = (props: DataProps) => {
               md: '80px',
               xs: '60px',
             },
-            color: 'white'
+            color: 'white',
+            fontFamily: 'Rubik'
           }}
         >
           <Translatable>
@@ -55,7 +56,9 @@ const HajjMinistryContent = (props: DataProps) => {
               md: '10px',
               xs: '50px',
             },
-            color: 'white'
+            color: 'white',
+            fontFamily: 'Rubik'
+
           }}>
             <Translatable>
               {props?.hero?.hero_title2}
@@ -74,7 +77,7 @@ const HajjMinistryContent = (props: DataProps) => {
             delay: 0.2,
           }}
         >
-          <Typography variant="h2" fontWeight={300} maxWidth={700} color={'white'}>
+          <Typography variant="h2" fontWeight={300} maxWidth={700} color={'white'} sx={{fontFamily: "Rubik"}}>
             <Translatable>
               {props?.hero?.hero_cta}
             </Translatable>

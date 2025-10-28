@@ -35,7 +35,7 @@ const C2a2 = (data: DataProps) => {
             <Grid item xs={12} sm={12} lg={12}>
               <div className=' md:flex items-center justify-between'>
 
-                <Typography variant="h2" maxWidth={600} color="background.paper" fontWeight={700}>
+                <Typography variant="h2" maxWidth={600} color="background.paper" fontWeight={700} sx={{fontFamily: "Rubik"}}>
                   <Translatable>
                     {data?.hero?.hero_title} 
                   </Translatable>
