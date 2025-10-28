@@ -12,16 +12,19 @@ const sectorOperators = [
         id: '1',
         name: 'Al-haramain',
         logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBxOuTngmpmeLYuAtC3v2_SsksMfD0farH7g&s",
+        jobs: 32
     },
     {
         id: '2',
         name: 'ٌRifad',
-        logo: "https://rifad.com.sa/wp-content/uploads/2023/03/rifad2small.png"
+        logo: "https://rifad.com.sa/wp-content/uploads/2023/03/rifad2small.png",
+        jobs: 47
     },
     {
         id: '3',
         name: 'Sar',
-        logo: "https://yt3.googleusercontent.com/ytc/AIdro_mExr_EkLTIJ1oQSPunXDgsmf19b3qEmmNKpy--WYS67lU=s900-c-k-c0x00ffffff-no-rj"
+        logo: "https://yt3.googleusercontent.com/ytc/AIdro_mExr_EkLTIJ1oQSPunXDgsmf19b3qEmmNKpy--WYS67lU=s900-c-k-c0x00ffffff-no-rj",
+        jobs: 18
     },
 ]
 
@@ -89,11 +92,12 @@ const Sidebar = (props: any) => {
             <div className='mb-20 xs:mb-[35px]'>
                 <motion.span className="mb-[35px] font-bold text-lg block" {...fadeInLeft}> <Translatable>Operators</Translatable></motion.span>
                 <motion.ul className="pl-0 flex gap-3" {...fadeInLeft}>
-                {sectorOperators?.map((el: {id: string, name: string, logo: string}) => {
+                {sectorOperators?.map((el: {id: string, name: string, logo: string, jobs: number}) => {
                     return (
                         <li key={el?.name} className='w-64 h-20 relative inline-block mb-[15px] leading-[18px]'>
                             <Link aria-label="link" to="#" className='inline-block text-left'>{el?.name}</Link>
-                            <img className='h-full w-full object-fill' src={el?.logo} alt="logo" />
+                            <img className='h-full w-full object-fill mb-2' src={el?.logo} alt="logo" />
+                            <span className='text-[0.7rem]'><Translatable>Vacancies</Translatable> <span className='text-white bg-teal-500 p-[4px] rounded-full'>{el?.jobs}</span></span>
                         </li>
                     )
                 })}
